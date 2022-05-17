@@ -1,0 +1,24 @@
+p{
+    letter-spacing: 5px;
+}
+table, th, td{
+    border: 1px solid black;
+}
+.box-set {
+    background: #eaeaed;
+
+  }
+  .box {
+    background: #2db34a;
+    float: left;
+    margin: 1.858736059%;
+    width: 29.615861214%;
+    height: 200px;
+  }
+  .box-set:before, .box-set:after{
+      content: "";
+      display: table;
+  }
+  .box-set:after{
+      clear: both;
+  }
