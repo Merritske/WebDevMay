@@ -1,0 +1,86 @@
+body{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#home{
+    text-align: center;
+}
+nav{
+    background-color: rgb(120,120 ,120);
+    border-radius: 10px;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type:none;
+}
+li{
+    padding: 20px;
+}
+a{
+    text-decoration: none;
+    color: azure;
+}
+#blog{
+  
+    column-count: 3;
+    column-gap: 20px;
+    column-rule: solid 2px blue;
+}
+#news::first-line{
+    font-size: larger;
+    color: green;
+}
+#newsitem {
+ 
+    width: 350px;
+    padding: 20px;
+}
+#newsitem::first-letter{
+    font-size: 30px;
+    color: blue;
+}
+img ~p{
+    margin: 30px;
+
+}
+#float>img{
+    margin-right: 20px;
+}
+#float >img{
+    float: left;
+    width: 300px;
+}
+#float::after{
+    content: "";
+    display: table; 
+     clear: both;
+}
+#footer{
+    background-color: grey;
+    height: 30px;
+    position: relative;
+  text-align: center;
+  padding: 10px;
+}
+#footer::before, #footer::after{
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+}
+#footer::before{
+    border-bottom: 25px solid grey ;
+    border-left: 25px solid transparent;
+    border-top: 25px solid grey;
+    left: -25px;
+    top:0px;
+}
+#footer::after{
+    border-bottom: 25px solid transparent;
+    border-left: 25px solid grey ;
+    border-top: 25px solid transparent ;
+    right: -25px;
+    top: 0;
+}
