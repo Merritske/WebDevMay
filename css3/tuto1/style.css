@@ -1,0 +1,35 @@
+body{
+    background-image: url(https://wallpapershome.com/images/pages/pic_h/23743.jpg);
+background-repeat: no-repeat;
+background-position: center;
+object-fit: cover;
+height: 100vh;
+}
+fieldset{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    /* border-color:  blue; */
+    border-width: 20px;
+    /* border-style: dotted; */
+    border-image: url(https://st3.depositphotos.com/3047333/12924/i/450/depositphotos_129246006-stock-photo-kitten-sitting-in-flowers.jpg) 15%  space;
+}
+textarea{
+    background-color: transparent;
+}
+.pic{
+    background-image: url(https://st3.depositphotos.com/3047333/12924/i/450/depositphotos_129246006-stock-photo-kitten-sitting-in-flowers.jpg);
+ background-repeat: repeat-x;
+width: 500px;
+height: 300px;
+}
+
+option[value="Volvo"]{
+    color: red;
+}
+label[name="computerbrand"]{
+ color: red;
+}
+checkbox{
+    color: red;
+}
