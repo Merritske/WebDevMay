@@ -1,0 +1,175 @@
+*,body{
+    margin: 0;
+    padding: 0;
+}
+ body{
+    background-image: url("https://st2.depositphotos.com/1437256/7935/i/600/depositphotos_79358976-stock-photo-pattern-with-pink-hydrangeas-and.jpg"), url("https://c.tenor.com/0CTbagn_hJQAAAAC/anime-totoro.gif") ;
+
+} 
+.grid{
+
+    display: flex;
+}
+    .container{
+
+    background-color: grey;
+    height: 200px;
+    width: 200px;
+    /* padding-left: 25px;
+    padding-top: 25px; */
+padding: 25px 4%;
+margin-left:auto ;
+margin-right: auto;
+offset: 10px red solid;
+border: 20px dashed green;
+}
+
+.container>p{
+   color: antiquewhite;
+   text-shadow: 9px 6px 2px red;
+   transform: rotate(20deg);
+   position: relative;
+   top: 80px;
+   font-size: 30px;
+   letter-spacing: 5px;
+}
+.content{
+    background-color: rgb(100,100,100);
+    padding: 5em;
+    width: auto;
+    /*width auto zorgt ervoor tov 100% dat er geen scrollbar wordt getoond*/
+
+}
+.content>img{
+    float: right;
+}
+.content>a{
+    color: aliceblue;
+ text-decoration-color: aqua;
+    font-size: 30px;
+}
+.content>a:hover{
+   text-decoration: none;
+}
+.content>a:visited{
+    color: blue;
+}
+.content>a:active{
+    color: pink;
+}
+.menu{
+margin-top: 50px;
+background-color: rgb(120,120,120);
+height: 50px;
+padding: 20px;
+}
+.menu>li{
+list-style-type: none;
+display: inline;
+margin-left: 20px;
+
+}
+/* .menu>li::marker{
+   color: red;
+    font-size: 25px;
+    } */
+    hr{
+        border-top: 5px dotted red;
+      border-bottom: 0;
+     border-left: 0;
+     border-right: 0; 
+    }
+
+  table{
+      text-align: center;
+      padding: 20px;
+      margin: 0 auto;
+      background-color: aliceblue;
+      border-radius: 5px;
+  }
+  th, td{
+      border: 2px solid black;
+      padding: 10px 15px;
+   
+  } 
+  th{
+      background-color: black;
+      color: wheat;
+  }
+  tr:nth-child(2n){
+      background-color: rgba(100,200,200,0.3);
+  }
+  tr:hover{
+      background-color: blue;
+  }
+  .boxContainer1{
+      width: 500px;
+      margin: 0 auto;
+  }
+  .boxContainer1>div{
+      width:100px ;
+     height: 100px;
+     padding: 3px;
+     margin: 5px auto;
+  }
+  .box1{
+      background-color: blue;
+      color: white;
+      position: relative;
+  }
+  .box2{
+    background-color: green;
+    color: white;
+    position: absolute;
+}
+.box3{
+    background-color: yellow;
+    color: white;
+}
+.box4{
+    background-color: red;
+    color: white;
+}
+.boxContainer2{
+position: relative;
+}
+.boxContainer2>div{
+    width:100px ;
+   height: 100px;
+   padding: 3px;
+   position: absolute;
+   z-index: 1;
+}
+.box5{
+    background-color: blue;
+    color: white;
+ left: 10px;
+}
+.box6{
+  background-color: green;
+  color: white;
+left: 20px;
+transform: rotate(15deg);
+}
+.box7{
+  background-color: yellow;
+  color: white;
+  left: 30px;
+  transform: rotate(45deg);
+}
+.box8{
+  background-color: red;
+  color: white;
+  left: 40px;
+  transform: rotate(75deg);
+}
+footer{
+    background-color: grey;
+    width: 100%;
+    height: 40px;
+text-align: center;
+position: sticky;
+/*sticky gaat met het scherm totdat het terug op zijn plaats staat */
+bottom: 0;
+
+}
