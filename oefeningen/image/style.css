@@ -1,6 +1,46 @@
 img{
     height: 350px;
 }
+#linear{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: 20px;
+ }
+#im1{
+
+}
+#backgroundim{
+    background-image: url("https://media.istockphoto.com/photos/green-lawn-at-hill-at-sunrise-picture-id1294990080?b=1&k=20&m=1294990080&s=170667a&w=0&h=-VYbhmVtOU1u6wx03JJwhiQjTc3N4IhddyvQliHs5sM=");
+height: 400px;
+width: 700px;
+background-repeat: no-repeat;
+background-size: cover;
+padding: 20px;
+line-height: 200%;
+}
+#linear-gradient{
+    /*ALS JE GEEN PERCENTAGES ZET IS HET FLU*/
+    background-image: repeating-linear-gradient(red, yellow, green 10%);
+    height: 500px;
+    width: 500px;
+}
+#radial-gradient{
+    background-image: repeating-radial-gradient(red , yellow 10% , green 15%);
+    /*WERKT ENKEL IN DEZE VERHOUDING*/
+    height: 500px;
+    width: 500px;
+}
+#conic-gradient{
+    background-image: repeating-conic-gradient(red , yellow 10% , green 15% );
+    height: 500px;
+    width: 500px;
+}
+.backdrop{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+grid-gap:20px;
+}
 .background1{
     background: url("https://i.pinimg.com/originals/2c/77/44/2c774447d65ffdc65a724dbcde9ca0d9.jpg") no-repeat center;
     background-size: cover;
@@ -13,7 +53,107 @@ img{
 .textbox1{
     background-color: rgba(255, 255, 255, 0.4);
     -webkit-backdrop-filter: sepia(100%);
-    backdrop-filter: sepia(100%);
+    backdrop-filter: sepia(50%);
+    width: 30%;
+    padding: 20px;
+    margin: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+}
+.background2{
+    background: url("https://i.pinimg.com/originals/2c/77/44/2c774447d65ffdc65a724dbcde9ca0d9.jpg") no-repeat center;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+}
+.textbox2{
+    background-color: rgba(255, 255, 255, 0.4);
+
+    backdrop-filter: blur(5px);
+    width: 30%;
+    padding: 20px;
+    margin: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+}
+.background3{
+    background: url("https://i.pinimg.com/originals/2c/77/44/2c774447d65ffdc65a724dbcde9ca0d9.jpg") no-repeat center;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+}
+.textbox3{
+    background-color: rgba(255, 255, 255, 0.4);
+
+    backdrop-filter: contrast(250%);
+    width: 30%;
+    padding: 20px;
+    margin: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+}
+.background4{
+    background: url("https://i.pinimg.com/originals/2c/77/44/2c774447d65ffdc65a724dbcde9ca0d9.jpg") no-repeat center;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+}
+.textbox4{
+    background-color: rgba(255, 255, 255, 0.4);
+
+    backdrop-filter: grayscale(100%);
+    width: 30%;
+    padding: 20px;
+    margin: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+}
+.background5{
+    background: url("https://i.pinimg.com/originals/2c/77/44/2c774447d65ffdc65a724dbcde9ca0d9.jpg") no-repeat center;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+}
+.textbox5{
+    background-color: rgba(255, 255, 255, 0.4);
+
+    backdrop-filter: hue-rotate(45deg) ;
+    width: 30%;
+    padding: 20px;
+    margin: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+}
+.background6{
+    background: url("https://i.pinimg.com/originals/2c/77/44/2c774447d65ffdc65a724dbcde9ca0d9.jpg") no-repeat center;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+}
+.textbox6{
+    background-color: rgba(255, 255, 255, 0.4);
+
+    backdrop-filter: saturate(10);
     width: 30%;
     padding: 20px;
     margin: 30px;
