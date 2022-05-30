@@ -1,0 +1,106 @@
+*,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: red;
+    padding: 15px;
+    color: antiquewhite;
+    text-align: center;
+}
+
+nav {
+    background-color: blue;
+    padding: 15px;
+    color: aliceblue;
+    text-align: center;
+}
+
+nav>ul {
+    list-style-type: none;
+}
+
+nav>ul>li {
+    display: inline;
+    font-size: 25px;
+    margin: 1em;
+}
+
+aside {
+    background-color: burlywood;
+    padding: 13px;
+    width: 23%;
+    float: left;
+    margin: 5px;
+}
+
+aside>ul {
+    list-style-type: none;
+}
+
+aside>ul>li {
+    font-size: 18px;
+}
+
+main {
+    background-color: tomato;
+    width: 70%;
+    float: right;
+    margin: 5px;
+    color: beige;
+    padding: 3px;
+}
+
+footer {
+    background-color: grey;
+    clear: both;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    color: azure;
+}
+
+article {
+    /* height: 70px; */
+    background-color: yellow;
+    color: black;
+    margin: 2px;
+    padding: 10px;
+}
+
+article>p {
+    /* width: 300px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-overflow: "...";
+    overflow: hidden; */
+    column-count: 3;
+}
+.gallery-container{
+    display: grid;
+    /* grid-template-columns: auto auto auto; */
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+}
+.box{
+    background-color: whitesmoke;
+    margin: 1px;
+    height:100px ;
+    color: black;
+    animation: myAnimation 6s infinite ease-in-out;
+}
+
+@keyframes myAnimation{
+    0%{
+        transform: rotate(25deg);
+    }
+    50%{
+        transform: rotate(-25deg);
+    }
+    100%{
+        transform: rotate(25deg);
+    }
+  
+}

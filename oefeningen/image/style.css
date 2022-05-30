@@ -1,0 +1,23 @@
+img{
+    height: 350px;
+}
+.background1{
+    background: url("https://i.pinimg.com/originals/2c/77/44/2c774447d65ffdc65a724dbcde9ca0d9.jpg") no-repeat center;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+}
+.textbox1{
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: sepia(100%);
+    backdrop-filter: sepia(100%);
+    width: 30%;
+    padding: 20px;
+    margin: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+}

@@ -1,0 +1,56 @@
+h1{
+    text-align: center;
+}
+div{
+    margin: 10px;
+    width: 500px;
+    padding: 10px;
+}
+.div1{
+    border: 10px solid blue;
+    border-radius: 5px;
+}
+.div2{
+    border: 15px ridge;
+}
+.div3{
+    border: 15px inset;
+}
+.div4{
+    border: 15px groove;
+}
+.groove{
+    margin: 0 auto;
+}
+.div4_1{
+    border-left: 15px groove;
+    border-top: 15px groove ;
+margin: 0 auto;
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: 30px;
+}
+h3{
+  margin: 0;
+  position: relative;
+  left: 240px;
+}
+.div4_2{
+    border-right: 15px groove rgb(120,120,120);
+    border-bottom: 15px groove rgb(120,120,120);
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 5px;
+    position: relative;
+    left: 20px;
+    top: -30px;
+}
+.div5{
+    border: 5px double red;
+}
+.div6{
+    border-top: 5px dashed blue;
+    border-left: 3px solid red;
+    border-bottom: 10px dotted blue;
+}
