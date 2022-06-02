@@ -1,0 +1,49 @@
+h1{
+    color: darkblue;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: blue;
+    padding: 20px;
+}
+
+.sidebar>h2{
+    writing-mode: vertical-lr;
+    float: left;
+    transform: rotateZ(180deg);
+    text-decoration-line: underline overline;
+}
+.sidebar>p{
+    word-spacing: 15px; 
+    
+}
+.sidebar>p>u{
+   background-color: red;
+   padding: 2px;
+   vertical-align: 20px;
+}
+.sidebar>p>span{
+    background-color: red;
+    padding: 2px;
+    color: bisque;
+    vertical-align: sub; 
+  
+}
+.main>h2{
+    text-transform: uppercase;
+    text-shadow: 10px 10px 5px red;
+
+}
+.body {
+    text-indent: 50px;
+    border: 3px darkblue dashed;
+    width: 300px;
+    height: 200px;
+    overflow: scroll;
+    text-overflow: ellipsis;
+    margin: 30px;
+    padding: 20px;
+}
+.body>h2{
+    text-emphasis: double-circle pink;
+    text-emphasis-position: under left;
+}
