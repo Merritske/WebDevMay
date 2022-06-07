@@ -1,3 +1,16 @@
+/*text-align-last
+text-align
+align-content
+tab-size
+quotes
+outline-offset
+outline
+grid
+display
+flex
+font from the internet
+box-shadow inset*/
+
 h1{
     color: darkblue;
     text-decoration: underline;
@@ -33,6 +46,19 @@ h1{
     text-shadow: 10px 10px 5px red;
 
 }
+.main> p{
+    margin: 20px;
+    font-size: 20px;
+    line-height: 60px;
+   
+}
+.main>p::first-letter{
+   float:  left;
+    font-size: 80px;
+    margin: 10px 0px 20px 35px ;
+    line-height: 0.3;
+    text-shadow: 4px 4px 0 #566074, 7px 7px 0 #333
+}
 .body {
     text-indent: 50px;
     border: 3px darkblue dashed;
@@ -46,4 +72,23 @@ h1{
 .body>h2{
     text-emphasis: double-circle pink;
     text-emphasis-position: under left;
+}
+#stroketekst{
+    text-align: center;
+    text-transform: uppercase;
+    background-color: blue;
+    font-size: 2em;
+    margin: 0;
+    -webkit-text-stroke: 2px white
+}
+#textshadow{
+    text-align: center;
+    background-color: aqua;
+    padding: 30px;
+
+    font-family: 'Macondo', cursive;
+    font-size: 50px;
+    text-shadow: 5px 5px 5px #566074, -5px -5px 5px  #566074;
+/* font-family: 'Smooch', cursive; */
+
 }
