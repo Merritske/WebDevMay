@@ -54,3 +54,15 @@ var rule1 = age>=18
 var rule2 = money >=1
 result = rule1 && rule2
 console.log(result + " 😎")
+
+//oefening:
+//verander de tekst in de html afhankelijk van de variabelen
+
+let container = document.getElementById("container")
+let x = "Hello"
+let y = "Goodbye"
+let z = "friend"
+
+let num = 12
+
+num > 10 ? container.innerHTML = `${x} ${z}` : container.innerHTML = `${y} ${z}`
