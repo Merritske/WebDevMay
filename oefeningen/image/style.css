@@ -490,8 +490,8 @@ img {
     align-content: flex-start;
     align-items: center;
     justify-content: space-evenly;
- 
-   clip-path: path("M 0,0 Q 30,30 0,0 T " );
+
+   clip-path: path("M 0,0 Q 30 30,  50 50, 60 30 T 80 30, 120 0 T 150 30, 180 0" );
    background-color: rgba(10,250,10,0.5);
   }
   .zee2>div{
