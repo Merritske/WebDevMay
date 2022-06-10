@@ -1,26 +1,16 @@
-/*text-align-last
-text-align
-align-content
-tab-size
-quotes
-outline-offset
-outline
-grid
-display
-flex
-font from the internet
-box-shadow inset*/
+
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 .container1{
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-template-areas: "a b " ;
+    grid-template-areas:  "a b " ;
     grid-gap: 10px;
     background-color: #f0f0f0;
     padding: 10px;
     border: 1px solid black;
 }
+
 .sidebar{
     grid-area: a;
     background-color: #f0f0f0;
@@ -49,6 +39,7 @@ h1{
     text-decoration-line: underline overline;
     height: 400px;
     float: left;
+    margin: 20px;
 }
 .side>h2{
      font-family: Arial, Helvetica, sans-serif;
@@ -89,10 +80,15 @@ letter-spacing: 15px;
     line-height: 0.3;
     text-shadow: 4px 4px 0 #566074, 7px 7px 0 #333
 }
+.text-tab{
+display: flex;
+flex-direction: row;
+}
 .body {
+
     text-indent: 50px;
     border: 3px darkblue dashed;
-    width: 600px;
+    width: 40%;
     height: 300px;
     overflow: scroll;
     text-overflow: ellipsis;
@@ -101,6 +97,7 @@ letter-spacing: 15px;
     font-family: "Lobster", cursive;
     font-size: 25px;
 }
+
 .body>h2{
     text-emphasis: double-circle pink;
     text-emphasis-position: under left;
@@ -121,6 +118,68 @@ letter-spacing: 15px;
     font-family: 'Macondo', cursive;
     font-size: 50px;
     text-shadow: 5px 5px 5px #566074, -5px -5px 5px  #566074;
-/* font-family: 'Smooch', cursive; */
 
+}
+.ernaast{
+    width: 60%;
+    font-size: 25px;
+  text-align-last: center;
+}
+ .ernaast>pre{
+  text-transform: uppercase;
+} 
+.container2{
+    height: 500px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.container2>div{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 10px;
+    text-align: center;  
+}
+.container2>div>h3{  
+  height: 200px;
+  line-height: 180px;
+}
+.box1{
+    background-color: red;
+}
+.box2{
+    background-color: blue;
+}
+.box3{
+    background-color: green;
+}
+.container3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container3>div{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 10px; 
+    padding: 15px;
+     font-size: 25px;
+     font-weight: 800;
+}
+.box4{
+    background-color: red;
+    box-shadow: inset 0 0 20px rgb(29, 3, 53);
+}
+.box5{
+    background-color: blue;
+    outline: 5px solid green;
+    outline-offset: 10px;
+}
+.box6{
+    background-color: green;
+    box-shadow: rgb(8, 165, 35) 55px 15px inset;
 }
