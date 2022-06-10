@@ -16,13 +16,13 @@
     background-color: #f0f0f0;
     padding: 10px;
     border: 3px dotted darkblue; 
-  
+  font-family: 'Times New Roman', Times, serif;
 }
 .main{
     grid-area: b;
     background-color: #f0f0f0;
     padding: 20px;
-  
+  font-family: 'Courier New', Courier, monospace;
 }
 h1{
     color: darkblue;
