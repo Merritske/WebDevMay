@@ -4,6 +4,12 @@ mix-blend-mode
 background-blend-mode
 svg: lijnen in de achtergrond
 canvas
+image maps
+<img src="img/canvas.png" alt="canvas" usemap="#imagemap">
+<map name= "imagemap">
+<area shape="rect" coords="0,0,100,100" href="link to other image or to other website">
+<area shape="circle" coords="100,0,200,100" href="https://www.google.nl/">
+</map>
 */
 body {
     margin: 0;
@@ -17,9 +23,36 @@ body {
 .title {
     margin: 40px;
     color: blue;
-
+}
+#backgroundim {
+    background-image: url("https://media.istockphoto.com/photos/green-lawn-at-hill-at-sunrise-picture-id1294990080?b=1&k=20&m=1294990080&s=170667a&w=0&h=-VYbhmVtOU1u6wx03JJwhiQjTc3N4IhddyvQliHs5sM=");
+    height: 400px;
+    width: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    line-height: 200%;
 }
 
+#linear-gradient {
+    /*ALS JE GEEN PERCENTAGES ZET IS HET FLU*/
+    background-image: repeating-linear-gradient(red, yellow, green 10%);
+    height: 500px;
+    width: 500px;
+}
+
+#radial-gradient {
+    background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+    /*WERKT ENKEL IN DEZE VERHOUDING*/
+    height: 500px;
+    width: 500px;
+}
+
+#conic-gradient {
+    background-image: repeating-conic-gradient(red, yellow 10%, green 15%);
+    height: 500px;
+    width: 500px;
+}
 img {
     height: 350px;
     margin: 20px;
@@ -168,35 +201,7 @@ img {
 
 }
 
-#backgroundim {
-    background-image: url("https://media.istockphoto.com/photos/green-lawn-at-hill-at-sunrise-picture-id1294990080?b=1&k=20&m=1294990080&s=170667a&w=0&h=-VYbhmVtOU1u6wx03JJwhiQjTc3N4IhddyvQliHs5sM=");
-    height: 400px;
-    width: 700px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 20px;
-    line-height: 200%;
-}
 
-#linear-gradient {
-    /*ALS JE GEEN PERCENTAGES ZET IS HET FLU*/
-    background-image: repeating-linear-gradient(red, yellow, green 10%);
-    height: 500px;
-    width: 500px;
-}
-
-#radial-gradient {
-    background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
-    /*WERKT ENKEL IN DEZE VERHOUDING*/
-    height: 500px;
-    width: 500px;
-}
-
-#conic-gradient {
-    background-image: repeating-conic-gradient(red, yellow 10%, green 15%);
-    height: 500px;
-    width: 500px;
-}
 
 .backdrop {
     display: grid;
