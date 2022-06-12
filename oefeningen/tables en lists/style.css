@@ -1,81 +1,220 @@
-body{
-margin: 0;
-padding: 0;
-text-align: center;
-font-family: Arial, Helvetica, sans-serif;
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
-h1{ 
+
+.container {
+    width: 90%;
+    margin: 120px auto;
+
+}
+
+h1 {
     font-size: 50px;
 }
-table{
+
+table {
     margin: 50px auto;
     width: 900px;
     font-size: 25px;
 }
-tr, td, th{
-    padding: 20px ;
+
+tr,
+td,
+th {
+    padding: 20px;
 }
-.table1>thead>tr>th{
+
+.table1>thead>tr>th {
     background-color: #4CAF50;
     color: white;
 }
-.table1>tbody>tr>td:nth-child(1){
+
+.table1>tbody>tr>td:nth-child(1) {
     background-color: #f2f2f2;
 }
 
-.table2, .table2 th, .table2 td{
+.table2,
+.table2 th,
+.table2 td {
 
     border: 2px solid #4CAF50;
     border-collapse: collapse;
 }
-.table2 td:not(:first-child){
+
+.table2 td:not(:first-child) {
     box-shadow: inset 0 0 10px #4CAF50;
 }
-.table2 tr:hover{
+
+.table2 tr:hover {
     cursor: pointer;
     background-color: #4CAF50;
     color: white;
 }
-.table3, .table3 th, .table3 td{
+
+.table3,
+.table3 th,
+.table3 td {
     border: 1px solid black;
     border-collapse: collapse;
 
 }
-.table3 tbody>tr:nth-child(2n){
-    background-color: rgb(20,180,15);
+
+.table3 tbody>tr:nth-child(2n) {
+    background-color: rgb(20, 180, 15);
     color: white;
     text-align: left;
 }
 
-.table3 tbody tr:nth-child(2n)>td{
+.table3 tbody tr:nth-child(2n)>td {
     height: 80px;
     vertical-align: bottom;
 }
-.table4{
+
+.table4 {
     border: 4px solid blue;
     border-radius: 20% 20% 20px 20px;
     padding: 30px;
-   width: 90%;
+    width: 90%;
 }
 
-.table4 th{
+.table4 th {
     border-bottom: 5px dashed black;
-  
+
 }
-.table4 th:not(:first-child){
+
+.table4 th:not(:first-child) {
     border-left: 3px dotted black;
 }
-.table4 tbody td{
+
+.table4 tbody td {
     border-bottom: 2px solid black;
 }
-.table4 tr:hover{
+
+.table4 tr:hover {
     background-color: #4CAF50;
     color: white;
     cursor: wait;
 }
-.lists{
+
+.lists {
     margin: 50px auto;
     width: 900px;
     font-size: 25px;
     text-align: left;
+}
+
+.listStyle1 {
+    list-style-type: upper-roman;
+    background-color: #4CAF50;
+    padding: 20px;
+    color: white;
+}
+
+.listStyle1>li {
+    margin-left: 35px;
+    background-color: rgb(116, 240, 112);
+    padding: 10px;
+}
+
+.listStyle2 {
+    list-style-type: lower-greek;
+    background-color: #4CAF50;
+    padding: 20px;
+}
+
+.listStyle2>li {
+    margin: 35px;
+    padding: 15px;
+    background-color: rgb(153, 245, 160);
+    border-radius: 15px;
+}
+
+.listStyle2>li::marker {
+    color: rgb(153, 245, 160);
+    font-weight: 900;
+}
+.counter{
+    counter-reset: ol;
+    list-style: none;
+}
+.counter>li{
+    counter-increment: ol;
+    margin: 20px;
+    text-align: center;
+}
+.counter>li::before{
+    display: block;
+    content: counter(ol) "!";
+    color: orangered;
+    font-size: 200%;
+    text-align: center;
+}
+.listStyle3 {
+    list-style-position: inside;
+    border: 3px solid black;
+
+}
+
+.listStyle4 {
+    list-style-position: outside;
+    border: 3px solid black;
+
+}
+
+.listStyle5 {
+    list-style-type: none;
+
+}
+
+.listStyle5>li {
+    margin: 35px;
+    padding: 20px;
+    border: 3px solid grey;
+    text-align: center;
+}
+
+.listStyle6 {
+    list-style-type: circle;
+
+}
+
+.listStyle7 {
+    list-style-type: square;
+
+}
+
+.listStyle8 {
+    list-style-type: none;
+    border-left: 15px solid red;
+    background-color: rgb(245, 178, 182);
+    padding: 10px 20px;
+}
+
+.listStyle9 {
+    list-style-image: url(https://www.animaties.com/data/media/1618/tux-bewegende-animatie-0007.gif);
+
+}
+.listStyle9-1>li::marker{
+content: "🚀";
+}
+.listStyle10{
+    background-image: url(https://i0.wp.com/blog.computercreatief.nl/wp-content/uploads/2020/05/4C346227-180E-4D1A-A7E6-F6B289A77C26.jpeg?resize=672%2C372&ssl=1);
+padding: 25px;
+}
+.listStyle10>li{
+    list-style-position: inside;
+    line-height: 80px;
+    height: 80px;
+    font-size: 50px;
+padding: 20px;
+background-color: red;
+margin: 20px;
+}
+.listStyle10>li::marker{
+    
+ font-size: 80px; 
+color: #4CAF50;
 }
