@@ -1,3 +1,218 @@
-body{
-    background-color: grey;
+/*global variabelen*/
+:root{
+    --kleur1: rgb(220,100,100);
+    --kleur2: rgb(200,20,100);
+    --kleur3: rgb(150,20,10);
+    --kleurBg: rgb(240, 230, 220)
+
 }
+body{
+    background-color:var(--kleurBg);
+  
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+h1{
+      text-align: center;
+}
+form input{
+    margin: 10px ;
+padding: 5px;
+}
+#form1{
+   width: 700px;
+    margin: 0 auto;
+}
+#form1 label{
+margin-left: 20px;
+}
+
+#fieldset1{
+    border: 5px solid var(--kleur2);
+}
+#fieldset1 legend{
+  color: var(--kleur3);
+  font-weight: 800;
+}
+#form2{
+background-color:var(--kleur1);
+padding: 20px;
+display: flex;
+flex-direction: column;
+}
+#form2 label{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(245, 239, 239);
+    text-align: center;
+}
+#form2 input{
+    width: 90%;
+}
+#form2 button{
+    background-color: var(--kleur3);
+    color: rgb(245, 239, 239);
+    border: none;
+    padding: 5px;
+    font-size: 20px;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+#fieldset3{
+    border: 5px solid var(--kleur2);
+    border-radius: 10px;
+}
+#fieldset3 legend{
+    color: var(--kleur2);
+    font-weight: 800;
+  }
+#form4{
+    background-color: var(--kleur1);
+    padding: 20px;
+    border-radius: 10px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; 
+      color: var(--kleurBg);
+}
+.col-25{
+    width: 25%;
+}
+.col-75{
+    width: 75%;
+    padding: 5px;
+}
+.col-75 input{
+width: 80%; 
+border: 2px solid var(--kleur2);
+  background-color: var(--kleur1);
+}
+#form4 > input[type=submit]{
+    background-color: var(--kleur2);
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    color: var(--kleur1);
+    font-size: 20px;
+    font-weight: 800;
+}
+#favcolor{
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+}
+#form4 > input[type=submit]:hover{
+    background-color: var(--kleurBg);
+    cursor: pointer;
+}
+.line{
+    display: flex;
+    flex-direction: column;
+}
+.line input{
+    border: none;
+    border-bottom: 3px solid var(--kleur3);
+background-color: var(--kleurBg);
+box-sizing: border-box;
+color: white;
+font-weight: 700;
+font-size: 20px;
+}
+.line input:focus{
+    border: 5px solid var(--kleur2);
+    background-color: var(--kleur1);
+    outline-width: 0px;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+#fieldset4{
+        font-family: monospace;
+    border: 5px solid var(--kleur2);
+    border-radius: 10px;
+}
+#fieldset4 legend{
+    color: var(--kleur2);
+    font-weight: 800;
+    font-size: 30px;
+    text-decoration: underline;
+padding: 10px;}
+#form5{
+
+    font-size: 20px;
+    color: var(--kleur3);
+    font-weight: 800;
+}
+#form5 input[type='radio'] {
+    position: relative;
+    top: 15px;
+    -webkit-appearance:none;
+    width:20px;
+    height:20px;
+    border:1px solid darkgray;
+    border-radius:50%;
+    outline:none;
+    box-shadow:0 0 5px 0px gray inset;
+  }
+
+
+input[type='radio']#red:hover {
+    box-shadow:0 0 5px 0px orange inset;
+  }
+input[type='radio']#blue:hover {
+    box-shadow:0 0 5px 0px blue inset;
+  }
+input[type='radio']#green:hover {
+    box-shadow:0 0 5px 0px green inset;
+  }
+  #form5 input[type='radio']#red:checked:before {
+    background-color: red;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    content:'';
+    display:block;
+    width:60%;
+    height:60%; 
+    border-radius:50%;    
+  }
+  #form5 input[type='radio']#blue:checked:before {
+    background-color: blue;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    content:'';
+    display:block;
+    width:60%;
+    height:60%; 
+    border-radius:50%;    
+  }
+  #form5 input[type='radio']#green:checked:before {
+    background-color: green;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    content:'';
+    display:block;
+    width:60%;
+    height:60%; 
+    border-radius:50%;    
+  }
+  #form5 input[type='submit']{
+background-color: var(--kleur3);
+border: 2px solid var(--kleur2);
+padding: 10px 20px;
+border-radius: 50%;
+font-size: 20px;
+font-weight: 900;
+color: var(--kleurBg);
+  }
+  #form5 input[type='submit']:hover{
+    background-color: var(--kleur2);
+    cursor: pointer;
+  }

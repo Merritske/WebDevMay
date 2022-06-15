@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,212 @@
     <link rel="stylesheet" href="style.css">
     <title>FORMS</title>
 </head>
+
 <body>
-    <div>
+    <div class="container">
         <h1>FORMS</h1>
+        <h2>Simpel form</h2>
+        <form action="#" target="_blank" method="get" id="form1">
+            <label for="fname">First name: </label>
+            <input type="text" name="firstName" id="fname">
+            <br>
+            <label for="lname">Last name: </label>
+            <input type="text" name="lastName" id="lname">
+            <br>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+        <hr>
+        <h2>FORM MET FIELDSET</h2>
+        <fieldset id="fieldset1">
+            <legend>Formulier </legend>
+            <form id="form2">
+                <label for="fname">First name: </label>
+                <input type="text" name="firstName" id="fname">
+                <br>
+                <label for="lname">Last name: </label>
+                <input type="text" name="lastName" id="lname">
+                <br>
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email">
+                <button type="submit">Submit</button>
+            </form>
+        </fieldset>
+        <br>
+        <hr>
+        <h2>INPUT TYPES</h2>
+        <fieldset id="fieldset2">
+            <legend>Input types </legend>
+            <form id="form3">
+                <label for="fname">Text </label>
+                <input type="text" name="firstName" id="fname">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+                <br>
+                <label >Email</label>
+                <input type="email" placeholder="xxx@gmail.com" >
+                <br>
+                <label >Number</label>
+                <input type="number" min="1" max="6">
+                <br>
+                <label >Datum</label>
+                <input type="date">
+                <br>
+                <label >Checkbox 1</label>
+                <input type="checkbox" name="checkbox" value="checkbox">
+             <label >Checkbox 2</label>
+                <input type="checkbox" name="checkbox" value="checkbox">
+                <br>
+                <h3> Radiobuttons</h3>
+                <input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">HTML</label><br>
+                <input type="radio" id="css" name="fav_language" value="CSS">
+                <label for="css">CSS</label><br>
+                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                <label for="javascript">JavaScript</label>
+                <br>
+                <br>
+                <label for="vol">Range:</label>
+                <input type="range" id="vol" name="vol" min="0" max="50">
+                <br><br>
+                <label for="select">Select option</label>
+                <select name="select" id="select">
+                    <option value="Volvo">Volvo</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Porsche">Posrsche</option>
+                    <option value="Audi">Audi</option>
+                    </select>
+              <br>
+                <br>
+                <label for="favcolor">Select your favorite color:</label>
+                <input type="color" id="favcolor" name="favcolor">
+                <br>
+                <label >Select a file</label>
+                <input type="file" name="file" id="file">
+                <br>
+                <label for="textarea">Textarea</label>
+                <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+           <br>
+           <label for="gsearch">Search</label>
+           <input type="search" id="gsearch" name="gsearch" >
+           <br>
+           <label for="phone">Telefoonnumber pattern</label>
+           <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+        <br>
+        <label >Time:</label>
+        <input type="time" > 
+        <br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        <br>
+        <a href="https://www.w3schools.com/html/html_form_attributes_form.asp" >Extra info over input attributes</a>
+     
+        </form>
+        </fieldset>
+        <br> 
+        <hr>
+        <h2>FORMULIER LAYOUT</h2>
+        <fieldset id="fieldset3">
+            <legend>Formulier layout </legend>
+            <form id="form4">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname">First name: </label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="firstName" id="fname">
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Last name: </label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="lastName" id="lname">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="email">Email: </label>
+                    </div>
+                    <div class="col-75">
+                        <input type="email" name="email" id="email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="password">Password: </label>
+                    </div>
+                    <div class="col-75">
+                        <input type="password" name="password" id="password">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="color1">
+                        <input type="radio" id="red1" name="fav_color" value="red">
+                        <label for="red1">Rood</label><br>
+                        <input type="radio" id="blue1" name="fav_color" value="blue">
+                        <label for="blue1">Blauw</label><br>
+                        <input type="radio" id="green1" name="fav_color" value="green">
+                        <label for="green1">Groen</label>
+                    </div>
+
+
+                    <label for="favcolor">Of selecteer je kleur hier:</label>
+                    <input type="color" id="favcolor" name="favcolor">
+                </div>
+
+
+                <input type="submit" value="Submit">
+            </form>
+        </fieldset>
+        <h2>FORMULIER LAYOUT</h2>
+        <fieldset id="fieldset4">
+            <legend>Formulier layout </legend>
+            <form id="form5">
+                <div class="line">
+                    <label for="fname">First name </label>
+                    <input type="text" name="firstName" id="fname">
+                </div>
+
+                <div class="line">
+                    <label for="lname">Last name </label>
+                    <input type="text" name="lastName" id="lname">
+                </div>
+                <div class="line">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="line">
+                    <label for="password">Password </label>
+                    <input type="password" name="password" id="password">
+                </div>
+
+          
+                    <div class="color">
+                        <input type="radio" id="red" name="fav_color" value="red">
+                        <label for="red">Rood</label><br>
+                        <input type="radio" id="blue" name="fav_color" value="blue">
+                        <label for="blue">Blauw</label><br>
+                        <input type="radio" id="green" name="fav_color" value="green">
+                        <label for="green">Groen</label>
+                    </div>
+
+
+                    <label for="favcolor">Of selecteer je kleur hier:</label>
+                    <input type="color" id="favcolor" name="favcolor">
+        <br>
+
+
+                <input type="submit" value="Submit">
+            </form>
+        </fieldset>
     </div>
 </body>
+
 </html>
