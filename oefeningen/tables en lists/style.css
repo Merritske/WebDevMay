@@ -214,7 +214,39 @@ background-color: red;
 margin: 20px;
 }
 .listStyle10>li::marker{
-    
  font-size: 80px; 
 color: #4CAF50;
+}
+.table5{
+    border-collapse: collapse;
+    width: 100%;
+
+}
+.table5>thead> tr{
+    border: 5px solid transparent !important;
+}
+.table5>thead>tr>th{
+    background-color: #4CAF50;
+    color: white;
+    border-bottom: green solid 15px;
+}
+.table6, .table6 th, .table6 td{
+    border-collapse: collapse;
+    width: 100%;
+border: 3px dashed #4CAF50;
+}
+.table6>thead>tr>th{
+    background-color: #4CAF50;
+    color: white;
+    border-bottom: green solid 15px;
+}
+.table6 th{
+    background-color: #f6f6f6;
+    width: 50px;
+    color: green;
+}
+.table6 td{
+    background-color:#333;
+    width: 50px;
+    color: green;
 }

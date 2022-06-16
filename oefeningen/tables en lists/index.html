@@ -168,14 +168,14 @@
                 </tr>
             </tbody>
         </table>
-        <table >
+        <table class="table5">
             <caption>Table 5: colgroup - colspan </caption>
             <colgroup>
             <col span="2" style="background-color: aqua ;">
             <col span="2" style="background-color: yellow ;">
             <col style="background-color: blue;">
             </colgroup>
-            <thead>
+            <thead style="border: 3px solid black;">
                 <tr>
                     <th>Datum</th>
                     <th>Evenement</th>
@@ -210,10 +210,41 @@
             <tfoot style="border-collapse: collapse;">
                 <tr style="background-color: green; ">
                     <td colspan="4" style="border: 3px solid red;border-right: none;">Totaal</td>
-                    <td style="border: 3px solid red; border-left: none;">800</td>
+                    <td style="border: 3px solid red; ">800</td>
                     
                 </tr>
             </tfoot>
+        </table>
+        <table class="table6">
+            <caption>Table 6: th in het begin van tr </caption>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Lisa</td>
+                    <td>Marks</td>
+                    <td>40</td>
+                </tr>
+            </tbody>
         </table>
     </div> 
     <hr>
