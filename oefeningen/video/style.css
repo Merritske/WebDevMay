@@ -11,58 +11,104 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    height: 220px;
 }
-.transition div{
-    margin: 10px;
-}
-.box1 {
-    background: #2db34a;
+.transition div>div{
+    margin: 10px; 
+     background: #2db34a;
     border-radius: 6px;
     cursor: pointer;
-    height: 95px;
+    height: 95px; 
+       width: 95px;
     line-height: 95px;
     text-align: center;
+    font-size: 15px;
+}
+.box1 {
+  
     transition-property: background-color, border-radius;
     transition-duration: .2s, 1s;
     transition-timing-function: linear;
-    width: 95px;
-    font-weight: 900;
+
   }
   .box1:hover {
     background-color: #5e2603;
     border-radius: 50%;
   }
   .box2 {
-    background: #2db34a;
-    border-radius: 6px;
-    cursor: pointer;
-    height: 95px;
-    line-height: 95px;
-    text-align: center;
     transition-property: height, font-size;
-    transition-duration: .2s, 1s;
-    transition-timing-function: ease-in;
-    width: 95px;
-    font-weight: 900;
+    transition-duration: .2s;
+    transition-timing-function: linear;
+
   }
   .box2:hover {
    height: 220px;
-  font-size: larger;
+  font-size: 30px;
   }
   .box3 {
-    background: #2db34a;
-    border-radius: 6px;
-    cursor: pointer;
-    height: 95px;
-    line-height: 95px;
-    text-align: center;
-    transition-property: background-color, border-radius;
-    transition-duration: .2s, 1s;
-    transition-timing-function: ease-in-out;
-    width: 95px;
-    font-weight: 900;
+   
+    transition-property: opacity, border;
+    transition-duration: 1s, 0.2s;
+    transition-timing-function:linear;
+
+
   }
   .box3:hover {
-    background-color: #5e2603;
-    border-radius: 50%;
+    box-sizing: border-box;
+opacity: 0.2;
+    border:15px solid rgb(83, 4, 4)
+  }
+  .box4 {
+   transition: text-shadow 0.3s linear, box-shadow 0.2s linear;
+color: #5e2603;
+font-weight: 900;
+  }
+  .box4:hover {
+   text-shadow: 0 0 15px black, 0 0 10px grey;
+   box-shadow: 0 0 10px black;
+  }
+  button{
+    padding: 10px 20px;
+    background-color:  #2db34a;
+    color:#f6d365;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #f6d365;
+    border-bottom: 8px solid #f6d365;
+ 
+    transition: all 0.1s linear;
+  }
+  button:active{
+    box-sizing: content-box;
+    transform: translateY(4px);
+    box-shadow: 0 0 10px grey;
+    border: none;
+    border-bottom: 5px solid #f6d365;
+  }
+  .container {
+    border: 3px solid red;
+ height: 200px ;
+    perspective: 800px;
+    position: relative;
+    width: 250px;
+ 
+  }
+  .card {
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    width: 100%;
+  }
+  .card:hover {
+    transform: rotateY(180deg);
+  }
+  .card .side {
+    backface-visibility: hidden;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+  .card .back {
+    transform: rotateY(180deg);
   }
