@@ -183,6 +183,27 @@ function sumOfNum(num1, num2){
     return num1 + num2
 }
 console.log(sumOfNum(num1, num2))
+//praktische toepassing
+var number1 = document.getElementById("num1")
+var number2 = document.getElementById("num2")
+var getButton = document.getElementById("btn")
+var result = document.getElementById("result")
+//console.log(result) alles testen dat het juist getarget is
+//define function
+function doCalc(){
+ 
+    //console.log("Hello test")
+    var sumResult = Number(number1.value) + Number(number2.value) //value is default 0 moet niet perse in HTML bij in input gezet worden
+   // console.log(sumResult)
+    result.innerHTML = `Result is ${sumResult}` //"result" is de target in html dat moet aangepast worden
+}
+// let nummer1 = document.querySelector("#num1").value;
+// console.log(nummer1)
+// let nummer2 = document.querySelector("#num2").value;
+// function bereken(nummer1, nummer2){
+//     return nummer1 + nummer2
+// }
+// console.log(bereken())
 
 function sayHello1(username){
     return "Hello " + username
