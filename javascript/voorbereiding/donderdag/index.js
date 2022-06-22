@@ -1,4 +1,43 @@
+//datum => new Date()
+//getHours(), getMonth(), getDate(), getDay()
+//oefening: hoe laat is het nu?
+let uur = new Date().getHours()
+console.log(uur)
+//oefening: Als het later is dan 11u => "Goedemiddag" als het eerder is dan 11u => "Goedemorgen"
+let time = new Date().getHours()
+let greeting = time > 11 ? time >= 16? "Goedeavond":"Goedemiddag" : "Goedemorgen"
+console.log(greeting)
+//zet het in HTML
+document.getElementById("intro").innerHTML = greeting
 
+//to Local String
+let result1;
+let date = new Date();
+let options = {weekday:'short', year:'numeric',month:'long',day:'numeric'}
+result1 = date.toLocaleString('nl-BE',options);
+//month : numeric or long - weekday: short or numeric
+document.getElementById('time').innerHTML = result1
+//oefening: realtime
+// setInterval(function(){
+//    // console.log('hello world')
+// }, 1000) //toont elke seconde 'hello world'
+// function getRealTime(){
+//     var dateObj = new Date();
+//     let getTime = `the current time is: ${dateObj.getHours()}:${dateObj.getMinutes()}:${dateObj.getSeconds()}`
+//   document.getElementById('time').innerHTML = getTime
+//     console.log(getTime)
+// }
+// setInterval(function(){
+//     getRealTime()
+// },1000)
+
+let result2;
+result2 = Math.random() //geeft een random getal tussen 0 en 1 (1not incuded)
+result2 = (Math.random()* 10)+1 //geeft getal van 1 tot 10 met komma's => startnummer = +1
+result2 = (Math.round(Math.random()*10)) //integer getallen van 0 tot 9
+result2 = Math.round(Math.random()*100)+1 //integer tussen 1-100
+result2 = Math.round(Math.random()*10)+5 // van 5 tot 15
+console.log(result2)
 //functies
 
 //gewone functie
@@ -22,8 +61,8 @@ const func3=(a,b)=>{
 console.log(func3(5, 3));
 
 function sumOfNumbers(){
-    console.log("before return keyword")
-    return 5+5
+    console.log("before return keyword");
+    return 5+5;
     console.log("after return keyword")//wordt niet getoond
 }
 console.log(sumOfNumbers())
@@ -50,6 +89,7 @@ const sayHello2 = (username) => {
 }
 console.log(sayHello2("Marc"))
 
+let arr2 = ["Lies", "Jan", "Jos"];
 const sayHello3= ()=>{
     arr2.map((user)=>{
         console.log(user)
@@ -80,11 +120,6 @@ console.log(students)
 
 
 
-//oefening: Als het later is dan 11u => "Goedemiddag" als het eerder is dan 11u => "Goedemorgen"
-let time = new Date().getHours()
-let greeting = time > 11 ? time >= 16? "Goedeavond":"Goedemiddag" : "Goedemorgen"
-console.log(greeting)
-//of zet het in HTML
 
 
 //oefening:
@@ -114,3 +149,38 @@ function bereken(){
     return result.innerHTML = `het resultaat is:${Number(nummer1.value)+ Number(nummer2.value)}` 
 };
 bereken();
+
+
+var student =[{
+    id:1,
+    fName:"Joe",
+    course: 'Java',
+    score : 45,
+},
+{
+    id:1,
+    fName:"Jos",
+    course: 'Java',
+    score: 55,
+},
+{
+    id:1,
+    fName:"Jack",
+    course: 'Phython',
+    score:70,
+}]
+result4 = student.filter(function(x){ 
+    return x.course ==="Jalsa"
+})//als de cursus niet bestaat
+result4 != 0 ? console.log(result4):console.log("Not found") 
+function findWhoPassedExam(param){ //dynamic om te kunnen gebruiken voor andere arrays
+    //filter data
+    let result4 = param.filter(function(value){
+       return value.score >=50 //return if student has score >=50
+    })
+  
+ return result4 //new array list is created here
+  
+}
+result4 = findWhoPassedExam(student)
+  console.log(result4)
