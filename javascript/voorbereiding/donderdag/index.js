@@ -244,6 +244,12 @@ btnReset.addEventListener('click', ()=>{
 //win or loose opties: blad wint tegen steen, steen wint tegen schaar,....
 
 
-//NOG OEFENINGEN
+//NOG OEFENINGEN:
+
 //TODO-list: met remove icon om een rij van een tabel te verwijderen
 //of andere lijst met een remove of delete button
+
+
+//iets laten bewegen door op een knop te drukken
+
+//style laten veranderen als je erover gaat met je muis
