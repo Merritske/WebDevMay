@@ -14,16 +14,47 @@
         input{
             margin: 20px;
         }
+        table, th, td{
+border: 3px solid black;
+border-collapse: collapse;
+padding: 10px;
+margin: 20px;
+        }
+        .counter{
+            margin: 100px;
+        }
+      .counter> button{
+            background-color: aqua;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body>
     <p>Date => new Date()</p>
     <h1 id="intro"></h1>
     <h2 id="time"> </h2>
+<hr>
+    <p>Math</p>
 
+<hr>
+<p>Functies</p>
+<hr>
+<h1>Studentenlijst</h1>
+<h2 >Geslaagd</h2>
+<table id="geslaagd">
+<thead>
+    <tr>
+        <th>NAAM</th>
+        <th>SCORE</th>
+    </tr>
+</thead>
 
+</table>
 
-    <form action="#" method="get">
+<hr>
+    <form action="#" method="get" onsubmit="event.preventDefault()">
         <input type="text" name="naam"  id="naam" placeholder="naam">
     <input type="password" name="passwoord"  id="password" placeholder="passwoord">
     <input type="submit" value="submit" 
@@ -31,6 +62,7 @@
     
 </form>
     <h2 id="welkom">Welkom stranger!</h2>
+
     <hr>
   
             <label for="num1">Voeg een nummer in</label>
@@ -42,6 +74,14 @@
             <button id="btn" onclick="bereken()">Bereken</button>
 
    <h2 id="result">Resultaat: </h2>
+   <hr>
+<div class="counter">
+       <h1>Counter</h1>
+   <h2 id="counter"></h2>
+   <button>+</button>
+   <button>-</button>
+   <button type="reset">Reset</button>
+</div>
 
    
             <script src="index.js"></script>

@@ -31,6 +31,7 @@ document.getElementById('time').innerHTML = result1
 //     getRealTime()
 // },1000)
 
+//MATH OBJECTS
 let result2;
 result2 = Math.random() //geeft een random getal tussen 0 en 1 (1not incuded)
 result2 = (Math.random()* 10)+1 //geeft getal van 1 tot 10 met komma's => startnummer = +1
@@ -38,6 +39,9 @@ result2 = (Math.round(Math.random()*10)) //integer getallen van 0 tot 9
 result2 = Math.round(Math.random()*100)+1 //integer tussen 1-100
 result2 = Math.round(Math.random()*10)+5 // van 5 tot 15
 console.log(result2)
+
+
+
 //functies
 
 //gewone functie
@@ -119,24 +123,87 @@ studentList({naam:"Marie", leeftijd: 27, woonplaats: "Mechelen"})
 console.log(students)
 
 
-
-
-
 //oefening:
 //verander de tekst in de html afhankelijk van de variabelen
+//maak een lijst in HTML waar al de geslaagde studenten in staan
+//en een lijst waar de studenten in staan die niet geslaagd zijn
+var student =[{
+    id:1,
+    naam:"Joe",
+    course: 'Java',
+    score : 45,
+},
+{
+    id:2,
+  naam:"Jos",
+    course: 'Java',
+    score: 55,
+},
+{
+    id:3,
+   naam:"Jack",
+    course: 'HTML',
+    score:70,
+},
+{
+    id:4,
+ naam:"Fien",
+    course: 'HTML',
+    score: 85,
+},
+{
+    id:5,
+   naam:"Piet",
+    course: 'Java',
+    score: 35,
+},
+{
+    id:6,
+  naam:"Lies",
+    course: 'Java',
+    score: 55,
+}
+]
+let result4;
+//filter functie geeft een nieuwe array met de elementen die aan bepaalde voorwaarden voldoen
+// result4 = student.filter(function(x){ 
+//     return x.course ==="Jalsa"
+// })//als de cursus niet bestaat
+// result4 != 0 ? console.log(result4):console.log("Not found")
 
-// let container = document.getElementById("container")
-// let x = "Hello"
-// let y = "Goodbye"
-// let z = "friend"
+function findWhoPassedExam(param){ //dynamic om te kunnen gebruiken voor andere arrays
+    //filter data
+    let result4 = param.filter(function(value){
+       return value.score >=50 //return if student has score >=50
+    })
+ return result4 //new array list is created here 
+}
+result4 = findWhoPassedExam(student)
+  console.log(result4)
+  //tabel maken met naam en score
+let tabel = document.getElementById("geslaagd")
 
-// let num = 12
+result4.map((data)=>{
+    tabel.innerHTML += `<tbody>
+    <tr>
+    <td>${data.naam}</td>
+    <td>${data.score}</td>
+    </tr>
+    </tbody>
+    `
+})
 
-// num > 10 ? container.innerHTML = `${x} ${z}` : container.innerHTML = `${y} ${z}`
 
 
+  
 //CLICK EVENTS
-//NOG OEFENINGEN
+//3 mogelijkheden:
+//in HTML: input naam en passwoord
+//in HTML click-event en functie in js
+//in js met addEventlistener
+
+
+
 //praktische toepassing
 
 let nummer1 = document.querySelector("#num1");
@@ -150,37 +217,6 @@ function bereken(){
 };
 bereken();
 
-
-var student =[{
-    id:1,
-    fName:"Joe",
-    course: 'Java',
-    score : 45,
-},
-{
-    id:1,
-    fName:"Jos",
-    course: 'Java',
-    score: 55,
-},
-{
-    id:1,
-    fName:"Jack",
-    course: 'Phython',
-    score:70,
-}]
-result4 = student.filter(function(x){ 
-    return x.course ==="Jalsa"
-})//als de cursus niet bestaat
-result4 != 0 ? console.log(result4):console.log("Not found") 
-function findWhoPassedExam(param){ //dynamic om te kunnen gebruiken voor andere arrays
-    //filter data
-    let result4 = param.filter(function(value){
-       return value.score >=50 //return if student has score >=50
-    })
-  
- return result4 //new array list is created here
-  
-}
-result4 = findWhoPassedExam(student)
-  console.log(result4)
+//NOG OEFENINGEN
+//TODO-list: met remove icon om een rij van een tabel te verwijderen
+//of andere lijst met een remove of delete button
