@@ -237,6 +237,12 @@ btnReset.addEventListener('click', ()=>{
 
 //events : click, onmouseover, onmouseleave,....w3schools/events
 
+//oefening: spelletje: BLAD STEEN SCHAAR
+//computer random laten kiezen tussen blad, steen of schaar
+//speler een keuze laten maken
+//keuzes vergelijken
+//win or loose opties: blad wint tegen steen, steen wint tegen schaar,....
+
 
 //NOG OEFENINGEN
 //TODO-list: met remove icon om een rij van een tabel te verwijderen
