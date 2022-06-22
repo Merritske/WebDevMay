@@ -198,13 +198,11 @@ result4.map((data)=>{
   
 //CLICK EVENTS
 //3 mogelijkheden:
-//in HTML: input naam en passwoord
-//in HTML click-event en functie in js
+//in HTML: input naam en passwoord =>input form
+//in HTML click-event en functie in js =>berekening som
 //in js met addEventlistener
 
-
-
-//praktische toepassing
+//berekening som
 
 let nummer1 = document.querySelector("#num1");
 console.log(nummer1)
@@ -216,6 +214,29 @@ function bereken(){
     return result.innerHTML = `het resultaat is:${Number(nummer1.value)+ Number(nummer2.value)}` 
 };
 bereken();
+
+//met addEventListener
+//eerste de elementen in HTML in js targetten
+let btnPlus = document.getElementById("verhoog")
+let btnMin = document.getElementById("verlaag")
+let btnReset = document.getElementById("reset")
+let counter = document.getElementById("counter")
+let count=0;
+btnPlus.addEventListener('click', ()=>{
+    count ++
+ counter.innerHTML = count
+})
+btnMin.addEventListener('click', ()=>{
+    count --
+ counter.innerHTML = count
+})
+btnReset.addEventListener('click', ()=>{
+   count = 0
+ counter.innerHTML = count
+})
+
+//events : click, onmouseover, onmouseleave,....w3schools/events
+
 
 //NOG OEFENINGEN
 //TODO-list: met remove icon om een rij van een tabel te verwijderen
