@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Javascript vrijdag</title>
+</head>
+
+<body>
+    <h1>Mouse events</h1>
+    <h2>Mouse enter - leave</h2>
+    <div class="mouse" onmouseenter="mouseenter()" onmouseleave="mouseleave()"></div>
+    <h2>Mouse move</h2>
+    <div class="mousemove" onmousemove="mousemove(event)"></div>
+
+    <h2 style="cursor: pointer;" onmousedown="mousedown()" onmouseup="mouseup()">Mouse down - up</h2>
+   
+        <p id="popup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum dolore reprehenderit unde distinctio, error
+            explicabo non a ad iste, aspernatur laboriosam voluptatibus magnam quas debitis sequi dicta eaque mollitia
+            quis?</p>
+  
+
+
+    <h1>BLAD STEEN SCHAAR</h1>
+    <form class="bss">
+
+        <label for="spel">Kies blad, steen of schaar: </label>
+        <select name="spel" id="spel">
+            <option value="blad">blad</option>
+            <option value="steen">steen</option>
+            <option value="schaar">schaar</option>
+        </select>
+    </form>
+
+    <h3 id="pckeuze">Keuze van de computer: </h3>
+
+    <p class="test">
+
+    </p>
+    <button onclick="uitslag()">kijk wie de winnaar is</button>
+    <ul id="winnaar">
+
+    </ul>
+    <h3 id="punten"></h3>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+
+}
+.mouse{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+}
+.mousemove{
+    width: 300px;
+    height: 300px;
+    border: 5px solid black;
+}
+#popup{
+    visibility: hidden;
+}
+.bss {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 30px;
+}
+.bss>label{
+    padding: 20px;
+}
+#spel {
+    width: 200px;
+    font-size: 30px;
+}
