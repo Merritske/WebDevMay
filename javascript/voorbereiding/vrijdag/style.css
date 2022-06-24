@@ -6,14 +6,18 @@ body {
     width: 200px;
     height: 200px;
     background-color: green;
+    margin: 0 auto;
 }
 .mousemove{
     width: 300px;
     height: 300px;
     border: 5px solid black;
+    margin: 0 auto;
 }
 #popup{
     visibility: hidden;
+    width: 300px;
+    margin: auto;
 }
 .bss {
     width: 80%;
@@ -26,4 +30,45 @@ body {
 #spel {
     width: 200px;
     font-size: 30px;
+}
+#winnaar{
+    list-style-type: none;
+}
+#btnSpel{
+    padding: 10px 30px;
+    background-color: blue;
+    font-size: 25px;
+    color: white;
+}
+#btnSpel:hover{
+    cursor: progress;
+}
+#inputboek{
+    width: 500px;
+    margin: auto;
+}
+#inputboek>input, textarea{
+    margin: 10px;
+    width: 300px;
+    font-size: 20px;
+}
+#btnLijst{
+    padding: 10px 20px;
+    background-color: coral;
+    color: bisque;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+#btnLijst:hover{
+    cursor: pointer;
+    background-color: rgb(209, 83, 37);
+}
+#boekenlijst{
+    width: 800px;
+    margin: auto;
+}
+#boekenlijst, #boekenlijst th, #boekenlijst td{
+    border: 2px solid coral;
+    border-collapse: collapse;
 }

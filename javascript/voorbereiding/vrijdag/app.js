@@ -29,6 +29,41 @@ function mouseup(){
     popup.style.visibility ="hidden"
     }
 
+    let zichtbaar = true;
+    let tekst = document.getElementById("testTekst")
+    function tonen(){
+        zichtbaar = !zichtbaar;
+        console.log(zichtbaar)
+        if(zichtbaar == true){
+            tekst.style.visibility ="visible"
+        }else{
+            tekst.style.visibility = "hidden"
+        }
+    
+    }
+
+//BOEKENLIJST
+let titel = document.getElementById("titel")
+let schrijver = document.getElementById("schrijver")
+let verhaal = document.getElementById("verhaal")
+let boek = document.getElementById("boek")
+let btnLijst = document.getElementById("btnLijst")
+
+
+btnLijst.addEventListener('click', function(){
+    console.log(titel.value)
+    boek.innerHTML += `<tr>
+    <td>${titel.value}</td>
+    <td>${schrijver.value}</td>
+    <td>${verhaal.value}</td>
+    <td id="vuilbak"><i class="fa-solid fa-trash-can" onclick="removeRij(this)"></i></td
+    `
+
+})
+function removeRij(e){
+    console.log(e.parentElement.parentElement)
+e.parentElement.parentElement.remove()
+}
 
 
     

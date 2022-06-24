@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Javascript vrijdag</title>
 </head>
 
@@ -17,12 +20,51 @@
     <div class="mousemove" onmousemove="mousemove(event)"></div>
 
     <h2 style="cursor: pointer;" onmousedown="mousedown()" onmouseup="mouseup()">Mouse down - up</h2>
-   
-        <p id="popup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum dolore reprehenderit unde distinctio, error
-            explicabo non a ad iste, aspernatur laboriosam voluptatibus magnam quas debitis sequi dicta eaque mollitia
-            quis?</p>
-  
 
+    <p id="popup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum dolore reprehenderit unde distinctio,
+        error
+        explicabo non a ad iste, aspernatur laboriosam voluptatibus magnam quas debitis sequi dicta eaque mollitia
+        quis?</p>
+        <h2 id="test" onclick="tonen()" >Zichtbaar</h2>
+        <p id="testTekst">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam assumenda quisquam neque id temporibus eligendi,
+            exercitationem adipisci officia, eius velit architecto dolores doloremque repellat qui voluptate vel fugit illum
+            iusto.</p>
+
+    <hr>
+
+    <h1>Boekenlijst</h1>
+
+    <form id="inputboek">
+        <input type="text" placeholder="titel" id="titel">
+        <br>
+        <input type="text" placeholder="schrijver" id="schrijver">
+        <br>
+        <textarea name="verhaal" id="verhaal" rows="10"></textarea>
+    
+    </form>
+    <button id="btnLijst" type="submit">Voeg toe</button>
+    <br>
+
+    <caption>Boekenlijst</caption>
+    <table id="boekenlijst">
+        <thead>
+            <tr>
+                <th>Titel</th>
+                <th>Schrijver</th>
+                <th>Korte inhoud</th>
+                <td>delete</td>
+            </tr>
+        </thead>
+        <tbody id="boek">
+            <tr>
+                <td>Elke 3 seconden</td>
+                <td>Van Bendeghem</td>
+                <td>De relatie tussen wiskunde en het dagelijkse leven</td>
+           <td id="vuilbak"><i class="fa-solid fa-trash-can"></i></td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
 
     <h1>BLAD STEEN SCHAAR</h1>
     <form class="bss">
@@ -40,12 +82,13 @@
     <p class="test">
 
     </p>
-    <button onclick="uitslag()">kijk wie de winnaar is</button>
+    <button id="btnSpel" onclick="uitslag()">kijk wie de winnaar is</button>
     <ul id="winnaar">
 
     </ul>
     <h3 id="punten"></h3>
 
+    <hr>
     <script src="app.js"></script>
 </body>
 
