@@ -48,9 +48,16 @@ let schrijver = document.getElementById("schrijver")
 let verhaal = document.getElementById("verhaal")
 let boek = document.getElementById("boek")
 let btnLijst = document.getElementById("btnLijst")
+let boeklijst=[]
 
-
-btnLijst.addEventListener('click', function(){
+btnLijst.addEventListener('click', function(){  
+      let obj = {
+        titel: titel.value,
+        schrijver: schrijver.value,
+        verhaal: verhaal.value
+    }
+    boeklijst.push(obj)
+localStorage.setItem("boek", JSON.stringify(boeklijst)) 
     console.log(titel.value)
     boek.innerHTML += `<tr>
     <td>${titel.value}</td>
@@ -58,14 +65,42 @@ btnLijst.addEventListener('click', function(){
     <td>${verhaal.value}</td>
     <td id="vuilbak"><i class="fa-solid fa-trash-can" onclick="removeRij(this)"></i></td
     `
-
+  
+schrijver.value = "";
+verhaal.value = "";
+ titel.value=""
 })
 function removeRij(e){
-    console.log(e.parentElement.parentElement)
+    console.log(e.parentElement.parentElement.firstChild.nextElementSibling.innerText)
+   
+ console.log(boeklijst)
+for(let x = 0; x< boeklijst.length; x++){
+   
+        if(boeklijst[x].titel == e.parentElement.parentElement.firstChild.nextElementSibling.innerText)
+{ boeklijst.splice(x,1)
+
+}
+
 e.parentElement.parentElement.remove()
 }
 
 
+ localStorage.setItem("boek", JSON.stringify(boeklijst))
+
+}
+
+window.addEventListener("DOMContentLoaded", function(){
+    boeklijst = JSON.parse(localStorage.getItem("boek"))
+    boeklijst.map((boekje)=>{
+          boek.innerHTML += `<tr>
+    <td>${boekje.titel}</td>
+    <td>${boekje.schrijver}</td>
+    <td>${boekje.verhaal}</td>
+    <td id="vuilbak"><i class="fa-solid fa-trash-can" onclick="removeRij(this)"></i></td
+    `
+    })
+  
+})
     
 //BLAD STEEN SCHAAR
 
