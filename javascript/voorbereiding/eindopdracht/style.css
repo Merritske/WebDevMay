@@ -119,6 +119,9 @@ footer{
     justify-content: space-around;
 background-color: rgb(201, 250, 155); 
 color: green;
+position: fixed;
+bottom: 0;
+width: 100%;
 }
 footer ul{
     list-style-type: none;
