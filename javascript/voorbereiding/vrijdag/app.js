@@ -48,7 +48,7 @@ let schrijver = document.getElementById("schrijver")
 let verhaal = document.getElementById("verhaal")
 let boek = document.getElementById("boek")
 let btnLijst = document.getElementById("btnLijst")
-let boeklijst=[]
+let boeklijst=[];
 
 btnLijst.addEventListener('click', function(){  
       let obj = {
