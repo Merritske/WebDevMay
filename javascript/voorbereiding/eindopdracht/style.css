@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(201, 250, 155); 
+   
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo h1{
+    color:green;
+    font-family: 'Diplomata SC', cursive;
+}
+.logo img{
+height: 50px;   
+object-fit: contain; 
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+      color:green;
+}
+.navbar>li{
+    padding: 20px;   
+     cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color:green;
+
+}
+
+#projects{
+    display: none; 
+    /* visibility: hidden; */
+    z-index: 2;
+    position: absolute;
+    list-style-type: none;
+    padding-inline-start: 0;
+
+}
+#projects>li{   
+       background-color: rgb(201, 250, 155);
+     border: 3px solid green; 
+      border-radius: 20px;
+      text-align: center;
+      margin: 5px;
+      padding: 5px 20px;
+}
+#projects>a{
+    background-color: rgb(201, 250, 155);
+    padding: 10px;
+}
+#projects li:hover{
+box-shadow: 5px 2px 10px rgb(25, 51, 24);
+}
+.intro{
+    text-align: center;
+}
+#welkom{
+ display: none;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+.blog{
+    width: 40%;
+    border: 4px dashed green;
+    padding: 10px;
+    margin-left: 15px;
+    list-style-type: none;
+}
+.blog>li:hover{
+background-color: green;
+color: beige;
+cursor: pointer;
+}
+.blog>li>h3{
+    border: 2px solid green;
+    padding: 5px;
+    border-bottom: 3px solid greenyellow;
+}
+.blog p{
+    display: none;
+    padding: 10px;
+}
+
+.foto{
+    margin: 0;
+    width: 60%;
+}
+.foto>img{
+    width: 100%;
+}
+#blogForm{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+#blogForm input, #blogForm textarea{
+    padding: 15px;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+background-color: rgb(201, 250, 155); 
+color: green;
+}
+footer ul{
+    list-style-type: none;
+ 
+}
+footer li{
+    display: inline;
+    padding: 20px;
+}

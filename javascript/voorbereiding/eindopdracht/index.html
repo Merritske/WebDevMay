@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Eindopdracht JAVA klas</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://www.pngmart.com/files/21/Family-Vacation-PNG-File.png" alt="logo">
+            <h1>JavaFront</h1>
+        </div>
+
+        <ul class="navbar">
+            <li>
+                <a href="index.html">HOME</a>
+            </li>
+            <li onclick="showProjects()">
+                PROJECTS
+                <ul id="projects">
+                    <li>
+                        <a href="#"> Layout</a>
+                    </li>
+                    <li>
+                        <a href="#">BLAD - STEEN - SCHAAR</a>
+
+                    </li>
+                </ul>
+
+            </li>
+            <li>
+                <a href="contact.html"> CONTACT</a>
+
+            </li>
+        </ul>
+
+    </header>
+
+    <main>
+        <div class="intro">
+            <form id="introForm" action="#" method="get" onsubmit="(e)=>e.preventDefault()">
+                <input type="text" name="Naam" id="welkomsttekst" placeholder="Naam">
+                <input type="submit" value="Submit" onclick="myWelkom()">
+            </form>
+            <h2 id="welkom">Welkom Stranger!</h2>
+        </div>
+        <div class="content">
+
+            <ul class="blog">
+               <li onclick="showBlog(this)">
+                  <h3  class="blogTitel">eerste blog item</h3>  
+                    <p class="blogInhoud">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut recusandae soluta corrupti ipsum
+                        dicta velit
+                        placeat, maiores deserunt aliquam quaerat quisquam sed incidunt eaque autem commodi! Expedita
+                        dolorem
+                        quam nemo.</p>
+                </li>
+                  <li onclick="showBlog(this)">
+                   <h3  class="blogTitel">tweede blog item </h3> 
+                    <p class="blogInhoud">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi eligendi, laborum quaerat amet
+                        minima culpa vitae aperiam obcaecati error libero, ipsa quis doloribus, recusandae suscipit
+                        nostrum ullam! Enim, vitae molestias.</p>
+                </li>
+                <li onclick="showBlog(this)">
+                  <h3  class="blogTitel">derde blog item </h3>  
+                    <p class="blogInhoud">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut recusandae soluta corrupti ipsum
+                        dicta velit
+                        placeat, maiores deserunt aliquam quaerat quisquam sed incidunt eaque autem commodi! Expedita
+                        dolorem
+                        quam nemo.</p>
+                </li>
+                <li onclick="showBlog(this)">
+                  <h3  class="blogTitel"> vierde blog item </h3> 
+                    <p class="blogInhoud">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut recusandae soluta corrupti ipsum
+                        dicta velit
+                        placeat, maiores deserunt aliquam quaerat quisquam sed incidunt eaque autem commodi! Expedita
+                        dolorem
+                        quam nemo.</p>
+                </li>
+                <li onclick="showBlog(this)">
+                  <h3  class="blogTitel">  vijfde blog item</h3> 
+                    <p class="blogInhoud">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut recusandae soluta corrupti ipsum
+                        dicta velit
+                        placeat, maiores deserunt aliquam quaerat quisquam sed incidunt eaque autem commodi! Expedita
+                        dolorem
+                        quam nemo.</p>
+                </li> 
+            </ul>
+
+            <div class="foto">
+                <img src="https://image.spreadshirtmedia.net/image-server/v1/products/T1300A1PA5179PT24X0Y0D191727212S100/views/1,width=500,height=500,appearanceId=1/evert-kwok-cartoon-ict-nerife-poster-60x60-cm.jpg"
+                  alt="vakantie">
+<!-- <form id="blogForm" action="#">
+            <input name="blog" id="inputBlogTitel" type="text" placeholder="Blog titel">
+            <textarea name="blog" id="inputBlogTekst" cols="30" rows="10" placeholder="Blog"></textarea>
+            <input type="button" value="Opslaan" onclick="blogOpslaan()">
+        </form> -->
+            </div>
+        </div>
+
+        
+    </main>
+    <footer>
+        &copy; An 2022
+        <ul>
+            <li>Contact</li>
+            <li>Github</li>
+        </ul>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
