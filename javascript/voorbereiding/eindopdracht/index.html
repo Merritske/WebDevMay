@@ -18,9 +18,11 @@
 
         <ul class="navbar">
             <li>
-                <a href="index.html">HOME</a>
+                <a href="#">HOME</a>
             </li>
-            <li onclick="showProjects()">
+            <li >
+            <!-- onclick="showProjects()" -->
+            
                 PROJECTS
                 <ul id="projects">
                     <li>
@@ -43,7 +45,7 @@
 
     <main>
         <div class="intro">
-            <form id="introForm" action="#" method="get" onsubmit="(e)=>e.preventDefault()">
+            <form id="introForm" action="#" method="get" onsubmit="e.preventDefault()">
                 <input type="text" name="Naam" id="welkomsttekst" placeholder="Naam">
                 <input type="submit" value="Submit" onclick="myWelkom()">
             </form>
@@ -52,39 +54,45 @@
         <div class="content">
 
             <ul class="blog">
-               <li onclick="showBlog(this)">
-                  <h3  class="blogTitel">eerste blog item</h3>  
-                    <p class="blogInhoud">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut recusandae soluta corrupti ipsum
+                <!--DIT IS DE BASIC OEFENING -->
+                    <li onclick="showBlog(this)">
+                    <h3 class="blogTitel">eerste blog item</h3>
+                    <p class="blogInhoud">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut recusandae soluta
+                        corrupti ipsum
                         dicta velit
                         placeat, maiores deserunt aliquam quaerat quisquam sed incidunt eaque autem commodi! Expedita
                         dolorem
                         quam nemo.</p>
                 </li>
-                  <li onclick="showBlog(this)">
-                   <h3  class="blogTitel">tweede blog item </h3> 
-                    <p class="blogInhoud">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi eligendi, laborum quaerat amet
+                <li onclick="showBlog(this)">
+                    <h3 class="blogTitel">tweede blog item </h3>
+                    <p class="blogInhoud">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi eligendi,
+                        laborum quaerat amet
                         minima culpa vitae aperiam obcaecati error libero, ipsa quis doloribus, recusandae suscipit
                         nostrum ullam! Enim, vitae molestias.</p>
                 </li>
                 <li onclick="showBlog(this)">
-                  <h3  class="blogTitel">derde blog item </h3>  
-                    <p class="blogInhoud">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut recusandae soluta corrupti ipsum
+                    <h3 class="blogTitel">derde blog item </h3>
+                    <p class="blogInhoud">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut recusandae soluta
+                        corrupti ipsum
                         dicta velit
                         placeat, maiores deserunt aliquam quaerat quisquam sed incidunt eaque autem commodi! Expedita
                         dolorem
                         quam nemo.</p>
                 </li>
                 <li onclick="showBlog(this)">
-                  <h3  class="blogTitel"> vierde blog item </h3> 
-                    <p class="blogInhoud">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut recusandae soluta corrupti ipsum
+                    <h3 class="blogTitel"> vierde blog item </h3>
+                    <p class="blogInhoud">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut recusandae soluta
+                        corrupti ipsum
                         dicta velit
                         placeat, maiores deserunt aliquam quaerat quisquam sed incidunt eaque autem commodi! Expedita
                         dolorem
                         quam nemo.</p>
                 </li>
                 <li onclick="showBlog(this)">
-                  <h3  class="blogTitel">  vijfde blog item</h3> 
-                    <p class="blogInhoud">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut recusandae soluta corrupti ipsum
+                    <h3 class="blogTitel"> vijfde blog item</h3>
+                    <p class="blogInhoud">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut recusandae soluta
+                        corrupti ipsum
                         dicta velit
                         placeat, maiores deserunt aliquam quaerat quisquam sed incidunt eaque autem commodi! Expedita
                         dolorem
@@ -94,22 +102,25 @@
 
             <div class="foto">
                 <img src="https://image.spreadshirtmedia.net/image-server/v1/products/T1300A1PA5179PT24X0Y0D191727212S100/views/1,width=500,height=500,appearanceId=1/evert-kwok-cartoon-ict-nerife-poster-60x60-cm.jpg"
-                  alt="vakantie">
-<!-- <form id="blogForm" action="#">
+                    alt="vakantie">
+                    <!--DIT IS DE UITBREIDINGSOEFENING-->
+              <form id="blogForm" action="#">
             <input name="blog" id="inputBlogTitel" type="text" placeholder="Blog titel">
             <textarea name="blog" id="inputBlogTekst" cols="30" rows="10" placeholder="Blog"></textarea>
             <input type="button" value="Opslaan" onclick="blogOpslaan()">
-        </form> -->
+        </form> 
             </div>
         </div>
 
-        
+
     </main>
     <footer>
         &copy; An 2022
         <ul>
-            <li>Contact</li>
-            <li>Github</li>
+            <li><a href="contact.html" >Contact</a> </li>
+            <li> <a href='https://github.com/Merritske' target="_blank">
+                <img src='https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png'
+                        alt="github logo" id="github" width="30px" /> </a></li>
         </ul>
     </footer>
     <script src="app.js"></script>

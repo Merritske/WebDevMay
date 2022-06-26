@@ -1,12 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            text-align: center;
+            color: green;
+        }
+
+        table {
+            margin: auto;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid green;
+            border-collapse: collapse;
+            padding: 10px 20px;
+            font-weight: 900;
+            width: 400px;
+            margin: 100px auto ;
+        }
+        tr:nth-child(1){
+            background-color: rgb(137, 245, 137);
+        }
+        i{
+            font-size: 35px !important;
+            color: black;
+        }
+        table>a{
+            text-decoration: none;
+            color: green;
+            font-weight: 900;
+            padding: 10px 30px;
+        }
+       table> a:hover{
+            color:rgb(4, 91, 4) ;
+            background-color: rgb(137, 245, 137);
+         border-radius: 30px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <header>
+        <div class="logo">
+            <img src="https://www.pngmart.com/files/21/Family-Vacation-PNG-File.png" alt="logo">
+            <h1>JavaFront</h1>
+        </div>
+
+        <ul class="navbar">
+            <li>
+                <a href="index.html">HOME</a>
+            </li>
+            <li >
+            <!-- onclick="showProjects()" -->
+            
+                PROJECTS
+                <ul id="projects">
+                    <li>
+                        <a href="#"> Layout</a>
+                    </li>
+                    <li>
+                        <a href="#">BLAD - STEEN - SCHAAR</a>
+
+                    </li>
+                </ul>
+
+            </li>
+            <li>
+                <a href="#"> CONTACT</a>
+
+            </li>
+        </ul>
+
+    </header>
+    <h1>Contact</h1>
+    <table>
+        <tbody>
+            <tr>
+                <th>NAAM</th>
+                <td>An Verbeeck</td>
+            </tr>
+            <tr>
+                <th><i class='fa fa-envelope-o'></i></th>
+                <td><a href="mailto:merritske@gmail.com">merritske</a></td>
+
+            </tr>
+            <tr>
+                <th> 
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Linkedin_icon.svg/1200px-Linkedin_icon.svg.png"
+                        alt="linkedIn logo" id="linkedIn" width="30px" /> </a></th>
+                <td><a href="https://www.linkedin.com/in/an-verbeeck-161a2a99/">An Verbeeck</a></td>
+
+            </tr>
+            <tr>
+                <th>
+                    <img src='https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png'
+                        alt="github logo" id="github" width="30px" />
+                </th>
+                <td> <a href='https://github.com/Merritske' target="_blank">
+                        Merritske</a></td>
+            </tr>
+
+        </tbody>
+    </table>
+    <footer>
+        &copy; An 2022
+        <ul>
+            <li><a href="contact.html" >Contact</a> </li>
+            <li> <a href='https://github.com/Merritske' target="_blank">
+                <img src='https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png'
+                        alt="github logo" id="github" width="30px" /> </a></li>
+        </ul>
+    </footer>
 </body>
+
 </html>

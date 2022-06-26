@@ -11,7 +11,7 @@ header {
     justify-content: space-around;
     align-items: center;
     background-color: rgb(201, 250, 155); 
-   
+   width: 100%;
 }
 .logo{
     display: flex;
@@ -22,7 +22,7 @@ header {
     font-family: 'Diplomata SC', cursive;
 }
 .logo img{
-height: 50px;   
+width: 80px;   
 object-fit: contain; 
 }
 .navbar{
@@ -30,6 +30,7 @@ object-fit: contain;
     flex-direction: row;
     list-style-type: none;
       color:green;
+
 }
 .navbar>li{
     padding: 20px;   
@@ -38,9 +39,10 @@ object-fit: contain;
 a{
     text-decoration: none;
     color:green;
-
 }
-
+.navbar li:hover #projects{
+    display: block;
+}
 #projects{
     display: none; 
     /* visibility: hidden; */
@@ -93,7 +95,8 @@ cursor: pointer;
     border-bottom: 3px solid greenyellow;
 }
 .blog p{
-    display: none;
+    /*display: none;*/
+    visibility: hidden;
     padding: 10px;
 }
 
@@ -119,13 +122,13 @@ footer{
     justify-content: space-around;
 background-color: rgb(201, 250, 155); 
 color: green;
-position: fixed;
+position: sticky;
 bottom: 0;
 width: 100%;
 }
 footer ul{
     list-style-type: none;
- 
+
 }
 footer li{
     display: inline;
