@@ -45,7 +45,7 @@
 
     <main>
         <div class="intro">
-            <form id="introForm" action="#" method="get" onsubmit="e.preventDefault()">
+            <form id="introForm" action="#" method="get" onsubmit="event.preventDefault()">
                 <input type="text" name="Naam" id="welkomsttekst" placeholder="Naam">
                 <input type="submit" value="Submit" onclick="myWelkom()">
             </form>
@@ -55,7 +55,7 @@
 
             <ul class="blog">
                 <!--DIT IS DE BASIC OEFENING -->
-                    <li onclick="showBlog(this)">
+                    <!-- <li onclick="showBlog(this)">
                     <h3 class="blogTitel">eerste blog item</h3>
                     <p class="blogInhoud">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut recusandae soluta
                         corrupti ipsum
@@ -97,10 +97,13 @@
                         placeat, maiores deserunt aliquam quaerat quisquam sed incidunt eaque autem commodi! Expedita
                         dolorem
                         quam nemo.</p>
-                </li> 
+                </li>  -->
             </ul>
 
             <div class="foto">
+
+                <input type="text" id="zoek" placeholder="zoek blog titel" style="margin:20px ;" onkeyup="zoekBlog()">
+    
                 <img src="https://image.spreadshirtmedia.net/image-server/v1/products/T1300A1PA5179PT24X0Y0D191727212S100/views/1,width=500,height=500,appearanceId=1/evert-kwok-cartoon-ict-nerife-poster-60x60-cm.jpg"
                     alt="vakantie">
                     <!--DIT IS DE UITBREIDINGSOEFENING-->
