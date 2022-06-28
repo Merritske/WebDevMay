@@ -42,6 +42,17 @@ function mouseup(){
     
     }
 
+    //input
+    let input = document.getElementById("inputTest")
+  //value in eventhandler zetten  
+  
+function submitName(){
+    event.preventDefault()
+    let inputV = input.value
+    console.log(inputV)
+input.value = ""
+}
+
 //BOEKENLIJST
 let titel = document.getElementById("titel")
 let schrijver = document.getElementById("schrijver")
