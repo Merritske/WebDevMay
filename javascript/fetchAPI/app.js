@@ -41,6 +41,8 @@ let putBtn = document.getElementById('updatePOST')
 let patchBtn = document.getElementById('updatePATCH')
 let delBtn = document.getElementById("del")
 
+//https://github.com/typicode/json-server#module
+
 //GET
 getBtn.addEventListener('click', (e)=>{
     console.log("hello GET")
@@ -52,68 +54,68 @@ getBtn.addEventListener('click', (e)=>{
     e.preventDefault()
 })
 
-//PUT
-putBtn.addEventListener('click', (e)=>{
-    fetch('http://localhost:5000/api/2',{
-        method: 'PUT',
-        headers:{
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            "username": "Joe DAlton"
-        })
-    })
-    .then(res=>res.json())
-    .then(data=>{
-        console.log(`PUT request: ${data}`)
-    })
-    e.preventDefault()
-    })
+// //PUT
+// putBtn.addEventListener('click', (e)=>{
+//     fetch('http://localhost:5000/api/2',{
+//         method: 'PUT',
+//         headers:{
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify({
+//             "username": "Joe DAlton"
+//         })
+//     })
+//     .then(res=>res.json())
+//     .then(data=>{
+//         console.log(`PUT request: ${data}`)
+//     })
+//     e.preventDefault()
+//     })
 
-//PATCH
-patchBtn.addEventListener('click', (e)=>{
-    fetch("http:localhost:5000/api/2", {
-        method: 'PATCH',
-        headers:{
-             'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                "password": "root12345"
-            })
-    })
-    .then(res=>res.json())
-    .then(data=>{
-        console.log(`PATCH request: ${data}`)
-    })
-})
+// //PATCH
+// patchBtn.addEventListener('click', (e)=>{
+//     fetch("http:localhost:5000/api/2", {
+//         method: 'PATCH',
+//         headers:{
+//              'Content-Type': 'application/json'
+//             },
+//             body: JSON.stringify({
+//                 "password": "root12345"
+//             })
+//     })
+//     .then(res=>res.json())
+//     .then(data=>{
+//         console.log(`PATCH request: ${data}`)
+//     })
+// })
 
-//POST
-postBtn.addEventListener('click',(e)=>{
-    e.preventDefault()
-    fetch("http:localhost:5000/api",{
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            "username": "student1",
-            "password": "12345"
-        })
-    })
-    .then(res=>res.json())
-    .then(data=>{
-        console.log(`POST request ${data}`)
-    })
-})
+// //POST
+// postBtn.addEventListener('click',(e)=>{
+//     e.preventDefault()
+//     fetch("http:localhost:5000/api",{
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify({
+//             "username": "student1",
+//             "password": "12345"
+//         })
+//     })
+//     .then(res=>res.json())
+//     .then(data=>{
+//         console.log(`POST request ${data}`)
+//     })
+// })
 
-//DELETE
-deleteBtn.addEventListener('click',(e)=>{
-    e.preventDefault()
-    fetch('http://localhost:5000/api/3',{
-        method:'DELETE'
-    })
-    .then(res=>res.json())
-    .then(data=>{
-        console.log('deleted: ',data)
-    })
-})
+// //DELETE
+// deleteBtn.addEventListener('click',(e)=>{
+//     e.preventDefault()
+//     fetch('http://localhost:5000/api/3',{
+//         method:'DELETE'
+//     })
+//     .then(res=>res.json())
+//     .then(data=>{
+//         console.log('deleted: ',data)
+//     })
+// })

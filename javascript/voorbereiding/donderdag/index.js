@@ -202,6 +202,33 @@ result4.map((data)=>{
 //in HTML click-event en functie in js =>berekening som
 //in js met addEventlistener
 
+//inputform resetten
+let formI =document.querySelector(".formI")
+let nameInput = document.getElementById('nameInput')
+let btn = document.getElementById("btn")
+let val = false;
+btn.addEventListener('click', (e)=>{
+    val = !val
+    if(!val){
+     formI.innerHTML = ` <form>
+   <input type="text" placeholder="naam" id="nameInput">
+</form>`
+ btn.innerHTML = "SUBMIT"
+ }else{
+    formI.innerHTML = `<h2>Welkom ${nameInput.value}</h2>`
+    btn.innerHTML = "RESET"
+ } 
+})
+
+//al de elementen dan de array optellen => eval()
+let arr = ["1","2","3","4","5"]
+console.log(arr)
+let arr1 = arr.join("+")
+arr1 = eval(arr1)
+ 
+ console.log(arr1);console.log(typeof(arr1))
+
+
 //berekening som
 
 let nummer1 = document.querySelector("#num1");
