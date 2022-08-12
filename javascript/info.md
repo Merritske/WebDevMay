@@ -17,3 +17,5 @@ https://www.freecodecamp.org/news/how-to-become-a-frontend-developer/
 https://www.freecodecamp.org/news/devops-engineering-course-for-beginners/
 
 https://www.freecodecamp.org/news/the-php-handbook/
+
+scrollbar: https://codepen.io/stephenpaton-tech/full/JjRvGmY
