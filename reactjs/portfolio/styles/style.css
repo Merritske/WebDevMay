@@ -37,7 +37,7 @@ a {
 }
 
 header {
-  height: 100vh;
+  min-height: 100vh;
   color: var(--color-white);
   overflow: hidden;
 }
@@ -48,7 +48,7 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  padding: 3rem;
+  padding: 3rem 18rem;
 }
 
 .section {
@@ -63,22 +63,6 @@ section {
 .sec4 {
   display: none;
   transform: translateY(0) scale(1);
-}
-
-.sec1 {
-  background-color: aqua;
-}
-
-.sec2 {
-  background-color: red;
-}
-
-.sec3 {
-  background-color: blue;
-}
-
-.sec4 {
-  background-color: yellow;
 }
 
 .active {
@@ -130,9 +114,77 @@ section {
   height: 50px;
   width: 50px;
   box-shadow: var(--box-shadow-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .controls .control i {
   font-size: 1.2rem;
   color: var(--color-grey2);
   pointer-events: none;
+}
+
+.header-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 100vh;
+}
+.header-content .left-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.header-content .left-header .h-shape {
+  transition: var(--transist);
+  width: 65%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  /*use clip-path generator to make a shape*/
+  -webkit-clip-path: polygon(0 0, 40% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 40% 0, 100% 100%, 0% 100%);
+}
+.header-content .left-header .image {
+  border-radius: var(--br-sm-2);
+  height: 90%;
+  width: 68%;
+  margin-left: 4rem;
+  background-color: var(--color-black);
+  transition: var(--transist);
+  z-index: 2 !important;
+  position: relative;
+}
+.header-content .left-header .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: var(--transist);
+  filter: grayscale(100%);
+  position: absolute;
+  z-index: 3;
+  border-radius: 5px;
+}
+.header-content .left-header .image img:hover {
+  cursor: pointer;
+  filter: grayscale(0);
+}
+.header-content .right-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 16rem;
+}
+.header-content .right-header .name {
+  font-size: 3rem;
+}
+.header-content .right-header .name span {
+  color: var(--color-secondary);
+}
+.header-content .right-header p {
+  margin: 1.5rem 0;
+  line-height: 2rem;
 }/*# sourceMappingURL=style.css.map */
