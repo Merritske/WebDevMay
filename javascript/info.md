@@ -19,3 +19,9 @@ https://www.freecodecamp.org/news/devops-engineering-course-for-beginners/
 https://www.freecodecamp.org/news/the-php-handbook/
 
 scrollbar: https://codepen.io/stephenpaton-tech/full/JjRvGmY
+
+https://www.sololearn.com/learning/1024
+
+Free API's zoeken => verschillende websites zonder APIkey
+
+https://www.thatjsdude.com/interview/js1.html //vraagjes jsprogrammeren
