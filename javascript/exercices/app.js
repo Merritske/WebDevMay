@@ -55,6 +55,7 @@ for(let x = 0; x< n.length;   x++){
   if(result !== ''){
        eindR.push(result)
   }
+
   tussenR = []
        }
 } 
@@ -62,3 +63,81 @@ for(let x = 0; x< n.length;   x++){
 
 sum("kp5dl85dml4589fsd")
 console.log(eindR)
+
+//oplossing Atilla 
+let str = 'abc23#$%23^&*()42\/'
+let sm = str.split('').map(x => {
+    if (!isNaN(x)) {
+        return parseInt(x)
+    }
+}).join(' ').split('  ').filter(x => {
+    return x !== ''
+}).map(x => {
+    return x.split(' ').join('')
+}).filter(x => x != '').reduce((a, b) => parseInt(a) + parseInt(b))
+console.log(sm)
+
+//reducer VOORBEELD
+
+
+const characters = [
+      { name: 'Jean-Luc Picard', age: 59 },
+      { name: 'Will Riker', age: 29 },
+      { name: 'Deanna Troi', age: 29 }
+    ];
+    // Start with an empty object, increment `map[age]` for each element
+// of the array.
+const reducer = (map, val) => {
+      if (map[val] == null) {
+        map[val] = 1;
+      } else {
+        ++map[val];
+      }
+      return map;
+    };
+   
+    console.log( characters.map(char => char.age).reduce(reducer, {})) //{ '29': 2, '59': 1 }
+//ANDER VOORBEELD MET REDUCE
+    const dates = [
+      '2019/06/01',
+      '2018/06/01',
+      '2019/09/01', // This is the most recent date, but how to find it?
+      '2018/09/01'
+    ];
+    // This works because you can compare JavaScript dates using `>` and `<`.
+// So `a > b` if and only if `a` is after `b`.
+const maxDate = dates.reduce((max, d) => d > max ? d : max, dates[0]);
+console.log(maxDate)
+
+//ANDER VOORBEELD REDUCE
+
+const lineItems = [
+      { description: 'Eggs (Dozen)', quantity: 1, price: 3, total: 3 },
+      { description: 'Cheese', quantity: 0.5, price: 5, total: 2.5 },
+      { description: 'Butter', quantity: 2, price: 6, total: 12 }
+    ];
+    lineItems.map(li => li.total).reduce((sum, val) => sum + val, 0);
+  //Abstract out the reducer into a function sum(), 
+  //and reuse it wherever you need to sum up an array.
+
+// Sum the totals
+lineItems.map(li => li.total).reduce(sumReducer, 0);
+
+// Sum the quantities using the same reducer
+lineItems.map(li => li.quantity).reduce(sumReducer, 0);
+
+function sumReducer(sum, val) {
+  return sum + val;
+}
+//This is important because, while you think sumReducer() will never change, 
+//it will. 
+//For example, the above code doesn't account for the fact that 0.1 + 0.2 !== 0.3 in JavaScript. 
+//This is a common mistake when calculating prices in an interpretted language. 
+//Binary floating points are weird. So you actually need to round:
+
+// const { round } = require('lodash');
+
+// function sumReducer(sum, val) {
+//   // Round to 2 decimal places.
+//   return _.round(sum + val, 2);
+// }

@@ -297,7 +297,47 @@
 
 
   </div>
+<svg width="500" height="500">
+<circle cx="100" cy="100" r="20" fill="red" >
+<animate attributeName="cx" from="20" to="150" dur="5s" fill="freeze" repeatCount="3" >
+</circle>
+<rect width="20" height="20" fill="green">
+<animate attributeName="width" from="20" to="500" dur="15s" fill="remove" repeatCount="indefinite">
+</rect>
+</svg>
+<canvas width="200" height="200" id="can1" ></canvas>
 
+<script>
+/* The canvas supports various other methods for drawing:
+
+Draw a Line
+moveTo(x,y): Defines the starting point of the line.
+lineTo(x,y): Defines the ending point of the line.
+
+Draw a Circle
+beginPath(): Starts the drawing.
+arc(x,y,r,start,stop): Sets the parameters of the circle.
+stroke(): Ends the drawing.
+
+Gradients
+createLinearGradient(x,y,x1,y1): Creates a linear gradient.
+createRadialGradient(x,y,r,x1,y1,r1): Creates a radial/circular gradient.
+
+Drawing Text on the Canvas
+Font: Defines the font properties for the text.
+fillText(text,x,y): Draws "filled" text on the canvas.
+strokeText(text,x,y): Draws text on the canvas (no fill). */
+
+  var canvas=document.getElementById("can1");
+  var ctx=canvas.getContext("2d");
+  ctx.fillStyle ="rgba(0, 100, 50, 0.8)";
+  ctx.fillRect (36, 10, 22, 22);
+  //transformatie eerst en daarna welke vorm
+  //translate(), rotate(in radians), scale(x,y)
+  ctx.rotate(Math.PI / 180 *25);
+  ctx.fillStyle="rgb(20,50,20)"
+  ctx.fillRect(40,20, 40,40 );
+</script>
 </body>
 
 </html>

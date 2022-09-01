@@ -16,6 +16,7 @@
     <div id="container">
 
     </div>
+    <progress max="100" value="60"></progress> <!--PROGRESSBAR-->
     <form onsubmit="return validate()" method="post">
         Number: <input type="text" name="num1" id="num1" />
         <br />
@@ -28,6 +29,15 @@
 <ol class="list">
   
 </ol>
+<!--DRAG AND DROP-->
+<div id="box" ondrop="drop(event)"
+ondragover="allowDrop(event)"
+style="border:1px solid black; 
+width:200px; height:200px"></div>
+
+<img id="image" src="./maki.jpg" draggable="true"
+
+ondragstart="drag(event)" width="150" height="100" object-fit="cover" alt="" />
     <!-- <script>
         var x = "John"
         const username = "root"

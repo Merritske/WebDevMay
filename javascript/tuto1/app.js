@@ -265,3 +265,17 @@ console.log(all);
 //in de file waar je het wil importeren
 //import * as sum from './filename.js'
 
+//DRAG AND DROP
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
