@@ -122,11 +122,13 @@ class Controller extends Client {
 }
 
 
-let admin = new Controller('Administrator');
+let admin = new Controller();
 admin.register('mehmet', 'mehmet12345');
 admin.register('ali', 'ali12345');
-// console.log(admin.getUsers())
-
+let admin1 = new Controller('administrator')
+admin1.register('An', 'BigMama1')
+console.log(admin1.getUsers())
+console.log(admin.getUsers())
 admin.getUsers().forEach(user => {
     console.log(user.username)
 })
