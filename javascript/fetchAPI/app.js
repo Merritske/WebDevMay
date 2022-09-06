@@ -35,7 +35,7 @@
 //     console.log(data)
 // })
 
-//create data.json
+//create data.json file
 //run server: json-server data.json --p5000
 
 let getBtn = document.getElementById('get')
@@ -46,7 +46,7 @@ let delBtn = document.getElementById("del")
 
 //GET
 getBtn.addEventListener('click', (e)=>{
-    console.log("hello GET")
+   // console.log("hello GET")
     fetch("http://localhost:3000/api")
     .then(res=>res.json())
     .then(data=>{
@@ -57,28 +57,29 @@ getBtn.addEventListener('click', (e)=>{
 
 //PUT
 putBtn.addEventListener('click', (e)=>{   
-    fetch('http://localhost:3000/api/2',{
+    fetch('http://localhost:3000/api/44',{
         method: 'PUT',
         headers:{
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            "woonplaats": "Antwerp",
-            "username" :"dean Dalton",
-            "password": "joe123"
+            "woonplaats": "Mechelen",
+            "username" :"Pietje Puk",
+            "password": "Poe123"
         })
     })
     .then(res=>res.json())
     .then(data=>{
-        console.log(`PUT request: ${data}`)
+        console.log(`PUT request: ${data}`)   
+       
     })
-    e.preventDefault()
+  e.preventDefault()
     })
 
 //PATCH
 patchBtn.addEventListener('click', (e)=>{
 
-    fetch('http://localhost:3000/api/6/', {
+    fetch('http://localhost:3000/api/46/', {
   
         method: 'PATCH',
         headers:{
@@ -86,7 +87,7 @@ patchBtn.addEventListener('click', (e)=>{
             },  
            
             body: JSON.stringify({
-                "password": "DADA123"
+                "username": "Piet"
             })
     })
  
@@ -106,8 +107,9 @@ postBtn.addEventListener('click',(e)=>{
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            "username": "student2",
-            "password": "12345"
+            "woonplaats": "Mechelen",
+            "username" :"Marie",
+            "password": "Mieke123"
         })
     })
     .then(res=>res.json())
