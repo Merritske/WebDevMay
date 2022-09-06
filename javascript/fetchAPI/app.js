@@ -36,7 +36,7 @@
 // })
 
 //create data.json
-//run server: json.server data.json --p3000
+//run server: json-server data.json --p5000
 
 let getBtn = document.getElementById('get')
 let postBtn = document.getElementById('post')
@@ -57,8 +57,7 @@ getBtn.addEventListener('click', (e)=>{
 
 //PUT
 putBtn.addEventListener('click', (e)=>{   
-      e.preventDefault()
-    fetch('http://localhost:3000/api/42',{
+    fetch('http://localhost:3000/api/2',{
         method: 'PUT',
         headers:{
             'Content-Type': 'application/json'
@@ -73,12 +72,13 @@ putBtn.addEventListener('click', (e)=>{
     .then(data=>{
         console.log(`PUT request: ${data}`)
     })
+    e.preventDefault()
     })
 
 //PATCH
 patchBtn.addEventListener('click', (e)=>{
-    e.preventDefault()
-    fetch('http://localhost:3000/api/42/', {
+
+    fetch('http://localhost:3000/api/6/', {
   
         method: 'PATCH',
         headers:{
@@ -93,12 +93,13 @@ patchBtn.addEventListener('click', (e)=>{
     .then(res=>res.json())
     .then(data=>{
         console.log(`PATCH request: ${data}`)
-    })
+    })    
+    e.preventDefault()
 })
 
 //POST
 postBtn.addEventListener('click',(e)=>{
-   e.preventDefault();
+
     fetch('http://localhost:3000/api',{ 
         method: 'POST',
         headers: {
@@ -113,17 +114,18 @@ postBtn.addEventListener('click',(e)=>{
     .then(data=>{
         console.log(`POST request ${data}`)
     }) 
-   
+      e.preventDefault();
 })
 
 //DELETE
 delBtn.addEventListener('click',(e)=>{
-    e.preventDefault()
-    fetch('http://localhost:3000/api/5/',{
+ 
+    fetch('http://localhost:3000/api/46/',{
         method:'DELETE'
     })
     .then(res=>res.json())
     .then(data=>{
         console.log('deleted: ',data)
-    })
+    })   
+    e.preventDefault()
 })
