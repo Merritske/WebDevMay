@@ -25,3 +25,7 @@ https://www.sololearn.com/learning/1024
 Free API's zoeken => verschillende websites zonder APIkey
 
 https://www.thatjsdude.com/interview/js1.html //vraagjes jsprogrammeren
+
+https://dmitripavlutin.com/react-context-and-usecontext/#:~:text=The%20React%20context%20provides%20data,the%20context%20concept%20in%20React
+
+https://www.andolasoft.com/blog/javascript-promises-and-fetch-api.html
