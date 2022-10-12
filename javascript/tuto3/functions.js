@@ -41,3 +41,10 @@ const getStudent = (studentParams) => {
     return isStudent? `NAME: ${studentParams.name} \nAGE: ${studentParams.age}\nSCORES:${student.scores.toString()}`: "he is not a student"
 }
 console.log(getStudent(student));
+
+//BMI calculator: weight/(height*height)
+function getBmi(w, h){
+    let bmi = (w/(h*h)).toFixed(2)
+   console.log(bmi)
+}
+getBmi(60,1.7)

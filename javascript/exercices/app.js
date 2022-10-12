@@ -42,7 +42,7 @@ function sum(n){
 console.log(n.length)
 for(let x = 0; x< n.length;   x++){
       while(!isNaN(n[x])){
-         console.log('iej')
+         //console.log('iej')
          a = n[x] 
          a = a*1
          tussenR.push(a) 
@@ -60,9 +60,14 @@ for(let x = 0; x< n.length;   x++){
        }
 } 
 }
-
+totaal = 0
 sum("kp5dl85dml4589fsd")
+for(let x = 0; x< eindR.length; x++){
+  let y = parseInt(eindR[x])
+  totaal += y
+}
 console.log(eindR)
+console.log(totaal)
 
 //oplossing Atilla 
 let str = 'abc23#$%23^&*()42\/'

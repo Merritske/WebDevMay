@@ -38,27 +38,35 @@ const textContainer = g('div')
 const text = g('p')
 text.innerText = "Dit is een cardcontainer gemaakt met javascript dmv createElement en append"
 textContainer.append(text)
-
+text.classList.add('text')
 show.append(img, textContainer)
 
 //maak een functie om deze card container te maken
 
-function makeCardContainer(image, cardTitle, description ){
+function makeCardContainer(image, cardTitle, description, btnColor, btnText = "info") {
     const card = g('div')
     card.setAttribute('style', 'width: 10rem; display: flex; flex-direction:column; margin: 3rem; border: 2px dotted black;')
-
+card.classList.add("card")
     const cardImg = g('img')
     cardImg.setAttribute('src', `${image}`)
+
     const cT = g('h3')
     cT.innerText = `${cardTitle}`
+
     const desc = g('p')
     desc.innerText = `${description}`
-let button = g('button')
-button.setAttribute('style', 'color:white;background-color:red;')
-button.innerText = 'info'
 
-card.append(cardImg, cT, desc, button)
-document.body.append(card)
+    let button = g('button')
+    button.setAttribute('style', `color:white;background-color:${btnColor};`)
+    button.innerText = `${btnText}`
+
+    card.append(cardImg, cT, desc, button)
+    document.body.append(card)
 }
-makeCardContainer("https://flxt.tmsimg.com/assets/p186109_i_v9_ad.jpg", "Avatar", "This is an avatar")
-makeCardContainer("https://i.pinimg.com/originals/5c/60/91/5c6091a3a978a99ce44242fae0d5ed4b.jpg", "ME?", "smile, life is beautiful")
+makeCardContainer("https://flxt.tmsimg.com/assets/p186109_i_v9_ad.jpg", "Avatar", "This is an avatar", "red")
+makeCardContainer("https://i.pinimg.com/originals/5c/60/91/5c6091a3a978a99ce44242fae0d5ed4b.jpg", "ME?", "smile, life is beautiful", "blue", "contact")
+
+let removebtn = document.querySelector("#removebtn")
+removebtn.addEventListener('click', ()=>{
+    document.body.removeChild(document.body.children[2])
+})
