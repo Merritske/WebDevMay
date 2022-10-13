@@ -7,10 +7,11 @@ function rundice() {
     let b = Math.round(Math.random() * 6);
     let diceA = document.querySelector('.a');
     let diceB = document.querySelector('.b')
+    diceA.innerHTML = a;
+    diceB.innerHTML = b;
     if (a == b) {
         score++
-        diceA.innerHTML = a;
-        diceB.innerHTML = b;
+
     }
     console.log(a, b)
     let sc = document.querySelector('.score')
