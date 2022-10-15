@@ -4,7 +4,9 @@
 //als 5 dezelfde 100punten
 let displDices = document.querySelector(".dices")
 let btn = document.querySelector('#throwDice')
+let reloadBtn = document.querySelector('#reload')
 let displScore = document.querySelector('#score')
+let differ = document.querySelector('#differ')
 let dices = []
 
 // function throwFirstDices() {
@@ -50,9 +52,12 @@ let aantalDices = 5
 let throws = 3
 //als aantal dices = 0 nog oplossen
 
-btn.addEventListener('click',
-  yatzee)
 
+ btn.addEventListener('click',
+  yatzee)  
+
+ 
+  
 let score = 0
 let delDice = []
 let difference
@@ -97,59 +102,76 @@ let difference
 
 //doubleDices() //double in array ok, double uit oorspronkelijke array = difference,  optellen doubles ok
 let allIndex = []
+let count = 0
 function yatzee() {
+
   if (throws == 0 || aantalDices <= 1) {
     console.log("einde spel")
     console.log(dices)
-  difference.map(x=> score += x)
+    difference.map(x => score += x)
     console.log(score)
     displScore.innerHTML = `het spel is ten einde, jouw score:${score}`
+    displDices.innerHTML = difference
+    differ.innerHTML += delDice
+btn.style.display = "none"
   } else {
     for (let x = 0; x < aantalDices; x++) {
       let dice = Math.ceil(Math.random() * 6)
       dices.push(dice)
     }
- 
+
     throws--
-   
     dices.map((dice, index) => {
       for (let y = 0; y < dices.length; y++) {
         if (dice == dices[y] && index != dices.indexOf(dices[y])) {
-          allIndex.push(index)//als de index meer dan 2 keer voorkomt actie ondernemen
-          if(allIndex.includes(index)){
-            console.log(index)
-            console.log(allIndex)
-          }
-          delDice.push(dices[y])
-                
-          console.log(dices)
-          console.log(delDice)
-
-          difference = dices.filter(x => !delDice.includes(x))
+count ++
+delDice.push(dices[y])
+if(count > 5){
+  for(let s = 0; s < count/2 ; s++){
+     delDice.shift(dices[y])
+  }
+ 
+}
+          
 
         }
       }
-
+      difference = dices.filter(x => !delDice.includes(x))
 
     })
 
- 
+
     aantalDices -= delDice.length
+console.log(count)
    
-     displScore.innerHTML = score   
-       delDice.map(x=> score += x)
-  delDice =[]
+
+    delDice.map(x => score += x)
+
+ displDices.innerHTML = dices
+  displScore.innerHTML = score  
+  for(let c = 0; c< delDice.length; c++){
+    delDice.map((elem, index)=>{
+    if(delDice[c] != elem && c == index){
+ delDice.splice(c,0)
+}
+console.log(delDice)
+    })
+
+  }
   }
 
-  console.log(dices)  
-    
-  displDices.innerHTML = dices
-  dices = difference
-   console.log(difference)
-     console.log(delDice)
- console.log(score)    
- dices =[] 
-}
 
+  console.log(dices)
+ 
+ 
+  differ.innerHTML += delDice + "<br>"
+    delDice = []
+  dices = difference
+  console.log(difference)
+  console.log(delDice)
+  console.log(score)
+  dices = []
+
+}
 
 
