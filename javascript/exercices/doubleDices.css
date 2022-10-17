@@ -1,0 +1,146 @@
+* {
+    text-align: center;
+}
+
+
+.shake {
+    animation-name: shake;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+  
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(20deg);
+        position: relative;
+        top: 180px;
+    }
+
+    5% {
+
+        transform: rotate(-20deg);
+    }
+
+    10% {
+
+        transform: rotate(20deg);
+    }
+
+    15% {
+
+        transform: rotate(-20deg);
+    }
+
+    20% {
+
+        transform: rotate(20deg);
+    }
+
+    25% {
+
+        transform: rotateY(-20deg);
+    }
+
+    30% {
+
+        transform: rotate(20deg);
+    }
+
+    35% {
+
+        transform: rotate(-20deg)
+    }
+
+    40% {
+        transform: rotate(20deg);
+    }
+
+    45% {
+
+        transform: rotate(-20deg);
+    }
+
+    50% {
+        transform: rotate(20deg);
+    }
+
+    55% {
+
+        transform: rotate(-20deg);
+    }
+
+    60% {
+        transform: rotate(20deg);
+        position: relative;
+        top: 120px;
+    }
+
+    65% {
+
+        transform: rotate(-20deg);
+    }
+
+    70% {
+        transform: rotate(20deg);
+    }
+
+    75% {
+
+        transform: rotate(-20deg);
+    }
+
+    80% {
+        transform: rotate(20deg);
+    }
+
+    85% {
+
+        transform: rotate(-20deg);
+    }
+
+    90% {
+        transform: rotate(20deg);
+    }
+
+    95% {
+
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform:rotate(20deg);
+        position: relative;
+        top: 0px;
+    }
+}
+#score{
+    width: 220px;
+}
+.dices{
+    position: relative;
+    top: -20px;
+    z-index: -1;
+}
+.dicesResult{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: green;
+    color: antiquewhite;
+    margin:0 auto ;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.buttons{
+    position: absolute;
+    top: 320px;
+    left: 200px;
+}
+button{
+    margin-top: 20px;
+    position: relative;
+
+}
