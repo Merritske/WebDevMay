@@ -121,11 +121,11 @@ function yatzee() {
   console.log(aantalDices)
   
     //throw dices
-    // for (let x = 0; x < aantalDices; x++) {
-    //   let dice = Math.ceil(Math.random() * 6)
-    //   dices.push(dice)
-    // }
-    dices = [3,3,3,3,3]
+    for (let x = 0; x < aantalDices; x++) {
+      let dice = Math.ceil(Math.random() * 6)
+      dices.push(dice)
+    }
+   //dices = [3,3,3,3,3]
     throws--
     //dubbels vinden
     dices.map((dice, index) => {
