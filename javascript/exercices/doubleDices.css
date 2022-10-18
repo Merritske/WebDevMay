@@ -1,54 +1,51 @@
 * {
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
+h1 {
+    margin-top: 1em;
+}
 
 .shake {
     animation-name: shake;
     animation-duration: 3s;
     animation-timing-function: linear;
-  
 }
 
 @keyframes shake {
     0% {
         transform: rotate(20deg);
         position: relative;
-        top: 180px;
+        top: 120px;
     }
 
     5% {
-
         transform: rotate(-20deg);
     }
 
     10% {
-
         transform: rotate(20deg);
     }
 
     15% {
-
         transform: rotate(-20deg);
     }
 
     20% {
-
         transform: rotate(20deg);
     }
 
     25% {
-
         transform: rotateY(-20deg);
     }
 
     30% {
-
         transform: rotate(20deg);
     }
 
     35% {
-
         transform: rotate(-20deg)
     }
 
@@ -57,7 +54,6 @@
     }
 
     45% {
-
         transform: rotate(-20deg);
     }
 
@@ -66,18 +62,16 @@
     }
 
     55% {
-
         transform: rotate(-20deg);
     }
 
     60% {
         transform: rotate(20deg);
         position: relative;
-        top: 120px;
+        top: 80px;
     }
 
     65% {
-
         transform: rotate(-20deg);
     }
 
@@ -86,7 +80,6 @@
     }
 
     75% {
-
         transform: rotate(-20deg);
     }
 
@@ -95,7 +88,6 @@
     }
 
     85% {
-
         transform: rotate(-20deg);
     }
 
@@ -104,43 +96,100 @@
     }
 
     95% {
-
         transform: rotate(-20deg);
     }
 
     100% {
-        transform:rotate(20deg);
+        transform: rotate(20deg);
         position: relative;
         top: 0px;
     }
 }
-#score{
-    width: 220px;
+
+#score {
+    width: 200px;
 }
-.dices{
+
+.dices {
     position: relative;
     top: -20px;
     z-index: -1;
 }
-.dicesResult{
+
+.dicesResult {
     width: 180px;
     height: 180px;
     border-radius: 50%;
     background-color: green;
     color: antiquewhite;
-    margin:0 auto ;  
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
+}
 
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
 }
-.buttons{
-    position: absolute;
-    top: 320px;
-    left: 200px;
+
+.result h3 {
+    margin: 2px;
 }
-button{
-    margin-top: 20px;
+
+.buttons {
+    margin: 0 auto;
+    width: 400px;
+    height: 200px;
+}
+
+button {
+    margin: 20px;
     position: relative;
+    padding: 8px;
+    border: 3px solid rgb(147, 253, 145);
+    background-color: green;
+    border-radius: 3px;
+    font-weight: 700;
+}
 
+button:hover {
+    border: 3px solid green;
+    background-color: rgb(147, 253, 145);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.dice {
+    position: relative;
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.dice1 {
+  margin: 3px;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: antiquewhite;
+}
+
+.dice3 {
+    transform: rotate(-45deg);
+    
+}
+.dice5{
+    position: absolute;
 }
