@@ -6,7 +6,7 @@ let displDices = document.querySelector(".dices")
 let btn = document.querySelector('#throwDice')
 let reloadBtn = document.querySelector('#reload')
 let displScore = document.querySelector('#score')
-let differ = document.querySelector('#differ')
+let highscore = document.querySelector('#highscore')
 let beurt = document.querySelector('#beurten')
 let dices = []
 let aantalDices = 5
@@ -14,40 +14,123 @@ let throws = 3
 btn.addEventListener('click',
   shakeDices)
 // let showtest = document.querySelector('.test')
-// let one = document.querySelector('.one')
-// let two = document.querySelector('.two')
-// let three = document.querySelector('.three')
-// let four = document.querySelector('.four')
-// let five = document.querySelector('.five')
-// let six = document.querySelector('.six')
-// let test = [one, two, three, four, five, six]
-// function showDices() {
-//   dices.map(x => {
-//     switch (x) {
-//       case 0:
-//         console.log("1")
-//         displDices.append(one);
-//         break;
-//       case 1:
-//         displDices.append(two);
-//         break;
-//       case 2:
-//         displDices.append(three);
-//         break;
-//       case 3:
-//         displDices.append(four);
-//         break;
-//       case 4:
-//         displDices.append(five);
-//         break;
-//       case 5:
-//         displDices.append(six);
-//         break;
-//       default:
-//     }
+highscore.innerHTML = "highscore: "+ localStorage.getItem("score")
+let c;
+let one, two, three, four, five, six;
+let drie;
 
-//   })
-// }
+function showDices() {
+  dices.map(x => {
+    console.log(x)
+    switch (x) {
+      case 1:
+        c = document.createElement('div')
+        one = document.createElement('div')
+        c.classList.add('dice')
+        one.classList.add('dice1')
+        c.appendChild(one)
+        displDices.appendChild(c)
+        break;
+      case 2:
+        c = document.createElement('div')
+        one = document.createElement('div')
+        two = document.createElement('div')
+        c.classList.add('dice')
+        one.classList.add('dice1')
+        two.classList.add('dice1')
+        c.appendChild(one)
+        c.appendChild(two)
+        displDices.append(c)
+
+
+        break;
+      case 3:
+        c = document.createElement('div')
+        one = document.createElement('div')
+        two = document.createElement('div')
+        three = document.createElement('div')
+        drie = document.createElement('div')
+        c.classList.add('dice')
+        one.classList.add('dice1')
+        two.classList.add('dice1')
+        three.classList.add('dice1')
+        drie.classList.add('dice3')
+        drie.appendChild(one)
+        drie.appendChild(two)
+        drie.appendChild(three)
+        c.appendChild(drie)
+        displDices.append(c)
+        break;
+      case 4:
+        c = document.createElement('div')
+        one = document.createElement('div')
+        two = document.createElement('div')
+        three = document.createElement('div')
+        four = document.createElement('div')
+        c.classList.add('dice')
+        one.classList.add('dice1')
+        two.classList.add('dice1')
+        three.classList.add('dice1')
+        four.classList.add('dice1')
+        c.appendChild(one)
+        c.appendChild(two)
+        c.appendChild(three)
+        c.appendChild(four)
+        displDices.append(c)
+        break;
+      case 5:
+        c = document.createElement('div')
+        one = document.createElement('div')
+        two = document.createElement('div')
+        three = document.createElement('div')
+        four = document.createElement('div')
+        five = document.createElement('div')
+
+
+        c.classList.add('dice')
+        one.classList.add('dice1')
+        two.classList.add('dice1')
+        three.classList.add('dice1')
+        four.classList.add('dice1')
+        five.classList.add('dice5')
+
+        c.appendChild(one)
+        c.appendChild(two)
+        c.appendChild(three)
+        c.appendChild(four)
+        c.appendChild(five)
+
+        displDices.append(c)
+        break;
+      case 6:
+        c = document.createElement('div')
+        one = document.createElement('div')
+        two = document.createElement('div')
+        three = document.createElement('div')
+        four = document.createElement('div')
+        five = document.createElement('div')
+        six = document.createElement('div')
+        c.classList.add('dice')
+        one.classList.add('dice1')
+        two.classList.add('dice1')
+        three.classList.add('dice1')
+        four.classList.add('dice1')
+        five.classList.add('dice1')
+        six.classList.add('dice1')
+        c.appendChild(one)
+        c.appendChild(two)
+        c.appendChild(three)
+        c.appendChild(four)
+        c.appendChild(five)
+        c.appendChild(six)
+        displDices.append(c)
+        break;
+      default:
+        displDices.innerHTML = "hello"
+    }
+
+  })
+}
 
 let score = 0
 let delDice = []
@@ -74,6 +157,7 @@ function yatzee() {
   }
   //dices = [3,3,3,3,3]
   throws--
+  showDices()
   //dubbels vinden
   dices.map((dice, index) => {
     for (let y = 0; y < dices.length; y++) {
@@ -90,11 +174,8 @@ function yatzee() {
     //verschil tussen dices en delDices om te weten aantalDices
     difference = dices.filter(x => !delDice.includes(x))
     console.log(difference)
-    displDices.innerHTML = difference
-    //  showDices()
-    // console.log(test)
-    // test.map(x=> showtest.append(x) )
   })
+
   aantalDices -= delDice.length
   //score
   delDice.map(x => score += x)
@@ -116,7 +197,7 @@ function yatzee() {
       eindeGame(difference)
     }
   }
-  differ.innerHTML += delDice + "<br>"
+  //differ.innerHTML += delDice + "<br>"
   delDice = []
   dices = difference
   dices = []
@@ -126,10 +207,16 @@ function eindeGame(difference) {
   console.log("einde spel")
   difference.map(x => score += x)
   displScore.innerHTML = `het spel is ten einde, jouw score:${score}`
-  displDices.innerHTML = difference
+  //displDices.innerHTML = difference
   //showDices()
   beurt.innerHTML = `resterende aantal worpen: 0`
   btn.style.display = "none"
+ 
+  if(score > localStorage.getItem("score")){
+      highscore.innerHTML = `highscore: ${score}`
+       localStorage.setItem("score", `${score}`)
+  }
+
 }
 //nog andere versie maken: zoals echte yatzee
 //zelfde als geselecteerde eruit nemen
