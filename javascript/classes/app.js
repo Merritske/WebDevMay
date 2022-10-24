@@ -38,7 +38,7 @@ class App{
     getUsers(){
         return this.users
     }
-
+static 
 }
 
 let app = new App('An')
