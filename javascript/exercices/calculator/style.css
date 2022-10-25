@@ -1,0 +1,36 @@
+*,
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.rekenmachine{
+     width: 400px;
+    margin: 0 auto; 
+    border: 3px solid black;
+    box-shadow: 3px 3px 3px gray;
+}
+.calculator, .output {
+   
+    display: flex;
+   
+}
+
+.cijfers, .operators {
+    width: 140px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+.cijfers div,
+.operators div, .clear, .resultaat {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1px;
+}
