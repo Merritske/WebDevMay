@@ -14,6 +14,11 @@ For example, if our page's body has a font size of 16px, using 1.5em will be equ
 
 responsive: 
     @media screen and (max-width: 480px){mobile}
+    Here are some of the most common practices to follow when building a responsive web page:
+- Use relative units (such as percentages) for the sizes of the elements and fonts.
+- Use CSS media queries to define breakpoints and layout changes.
+- Define the viewport to adapt to mobile screens.
+- Use CSS Flexbox to make it easier to create flexible layouts.
 
 submenu:
     We used a CSS hack in order to position our submenu in the center of the screen. The combination of absolute positioning, using the left and transform property, results in our submenu being positioned in the center of the screen and opened over the page elements.

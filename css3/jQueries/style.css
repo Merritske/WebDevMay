@@ -1,0 +1,12 @@
+*,  html{
+    font-size: 150px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.container{
+    font-size: 2rem;
+}
+.submenu{
+    display: none;
+}
