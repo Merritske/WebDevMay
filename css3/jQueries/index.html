@@ -11,21 +11,52 @@
 </head>
 
 <body>
-    <h1>Jqueries</h1>
-    <p>jQuery is a fast, small, and feature-rich JavaScript library.
-        It makes things like HTML document traversal and manipulation, 
-        event handling, and animation much simpler.</p>
+    <div class="head">
+        <h1>Jqueries</h1>
+        <p>jQuery is a fast, small, and feature-rich JavaScript library.
+            It makes things like HTML document traversal and manipulation,
+            event handling, and animation much simpler.</p>
+        <div id="start">START</div>
 
-        <div class="container">
-            <h3>slideToggle via jQuery</h3>
-        <button class="btn">Open menu</button>   
+
+    </div>
+    <div class="theory">
+        <pre>
+                    <p>
+Basic syntax is: $("selector").action() <br>
+ - The $ accesses jQuery. <br>
+ - The (selector) finds HTML elements. <br>
+ - The action() is then performed on the element(s). <br>           
+    
+    $("p").hide()  // hides all  elements <br>
+    $(".demo").hide()  // hides all elements with class="demo" <br>
+    $("#demo").hide()  // hides the element with id="demo"
+      </p>         
+      <p>The following jQuery methods are available to get and set content and attributes of selected HTML <br>
+        text() sets or returns the text content of selected elements. <br>
+        html() sets or returns the content of selected elements (including HTML markup). <br>
+        val() sets or returns the value of form fields. <br>
+        attr() sets or returns the value of attributes. <br>
+        removeAttr() removes the specified attribute.</p>
+    <p>jQuery has methods that are used to add new content to a selected element 
+        without deleting the existing content: <br>
+            append() inserts content at the end of the selected elements. <br>
+            prepend() inserts content at the beginning of the selected elements. <br>
+            after() inserts content after the selected elements. <br>
+            before() inserts content before the selected elements.</p>
+        </pre>
+    </div>
+
+    <div class="container">
+        <h3>slideToggle via jQuery</h3>
+        <button class="btn">Open menu</button>
         <ul class="submenu">
-            <li>menu1</li>
+            <li><a href="#" target="_blank">google</a> </li>
             <li>menu2</li>
             <li>menu3</li>
-        </ul> 
-        </div>
-        <script src="./jquery.js"></script>
+        </ul>
+    </div>
+    <script src="./jquery.js"></script>
 </body>
 
 </html>
