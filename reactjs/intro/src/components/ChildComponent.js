@@ -1,6 +1,7 @@
+import ChildOfChild from "./ChildOfChild.js"
 import {students,string, doMath} from "./Users.js"
 
-export default function ChildComponent(name) {
+export default function ChildComponent({name}) {
     const companyName = "Kookie"
     const result = 2 + 5
     function getSum(a, b) {
@@ -44,10 +45,9 @@ const style = {
      <h3>{doMath(5,2)}</h3>
 {/*ternary operator*/}
 {
-   students.map((user)=>{
-  return user === 'Jos' ? <><h2>{user}, vertel je nog eens een verhaal?</h2><p>over de avonturen van flappydappy</p></>: <h2>{user}, heb je Jos ergens gezien?</h2>
-   })
+   students.map((user)=>user === 'Jos' ? <><h2>{user}, vertel je nog eens een verhaal?</h2><p>over de avonturen van flappydappy</p></> : <h2>{user}, heb je Jos ergens gezien?</h2>)
 }
-<h3>{name}</h3>
+<h2>{name}</h2>
+<ChildOfChild  newName={name}/>
     </>
 }
