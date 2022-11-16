@@ -24,3 +24,17 @@ width: 70%;
  text-align: start;
  font-size: 1rem;
 }
+.layout{
+    background-color:green;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+.content{
+    background-color: blueviolet;
+    color: wheat;
+    box-sizing: unset;
+}
+.breedte{
+    display: flex;
+    justify-content: center;
+}
