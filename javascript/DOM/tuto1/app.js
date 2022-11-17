@@ -55,5 +55,13 @@ result = window.navigator //geeft info over pc, credentials,...
 result = window.location //.reload() om de page te refreshen 
 //enkel in onclick of zoiets anders zit die in een loop vast
 
+result = window.localStorage.getItem("data") //key aanwezig in localstorage met een value
+window.localStorage.removeItem("dat2") //key aanwezig in localstorage met een value
+localStorage.setItem('data1', 'koekies')//key value pair
+localStorage.setItem('names', ['Jos', 'Eddy'])
+var students = [{name:"a"}, {name:"b"}] //array met objects
+localStorage.setItem('people', JSON.stringify(students))
+
+localStorage.clear()//maakt localstorage leeg
 
 console.log(result)
