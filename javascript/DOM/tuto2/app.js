@@ -16,6 +16,7 @@ result = document.querySelectorAll('.card')//nodeList -> iterable
 result.forEach((e)=>{
     e.innerHTML += '<p>Sinterklaas is in het land!</p>'
 })
-
+//NOG OPZOEKEN window.scroll
+console.log(window.scrollY)
 
 console.log(result)
