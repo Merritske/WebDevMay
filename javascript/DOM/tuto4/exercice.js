@@ -1,6 +1,6 @@
 //element creator
 
-const g = t=>document.createElement(t)
+const g = t => document.createElement(t)
 //container
 const container = g('div')
 container.className = 'container'
@@ -46,13 +46,13 @@ index.setAttribute('scope', 'col')
 index.innerText = '#'
 const thfirstHead = g('th')
 thfirstHead.setAttribute('scope', 'col')
-thfirstHead.innerText = "A"
+thfirstHead.innerText = "naam"
 const thsecondHead = g('th')
 thsecondHead.setAttribute('scope', 'col')
-thsecondHead.innerText = 'B'
+thsecondHead.innerText = 'stad'
 const ththirdHead = g('th')
 ththirdHead.setAttribute('scope', 'col')
-ththirdHead.innerText = 'C'
+ththirdHead.innerText = 'leeftijd'
 
 trofthead.append(index)
 trofthead.append(thfirstHead)
@@ -63,9 +63,13 @@ thead.append(trofthead)
 const tbody = g('tbody')
 const tr1Body = g('tr')
 const td11Body = g('td')
+td11Body.innerText = "1"
 const td12Body = g('td')
+td12Body.innerText = "Jan"
 const td13Body = g('td')
+td13Body.innerText = 'Brussel'
 const td14Body = g('td')
+td14Body.innerText = "44"
 const tr2Body = g('tr')
 const td21Body = g('td')
 const td22Body = g('td')
@@ -81,20 +85,40 @@ const td41Body = g('td')
 const td42Body = g('td')
 const td43Body = g('td')
 const td44Body = g('td')
-tr1Body.append(td11Body,td12Body, td13Body, td14Body)
-tr2Body.append(td21Body,td22Body,td23Body, td24Body )
-tr3Body.append(td31Body, td32Body,td33Body, td34Body)
+tr1Body.append(td11Body, td12Body, td13Body, td14Body)
+tr2Body.append(td21Body, td22Body, td23Body, td24Body)
+tr3Body.append(td31Body, td32Body, td33Body, td34Body)
 tr4Body.append(td41Body, td42Body, td43Body, td44Body)
 tbody.append(tr1Body)
 tbody.append(tr2Body)
 tbody.append(tr3Body)
 tbody.append(tr4Body)
 
-
+//td22Body.innerText = prompt('geef je naam')
 table.append(thead)
 table.append(tbody)
 document.body.append(table)
 console.log(table, thead)
 
+const btn = g('button')
+btn.innerText = 'Voeg toe'
+document.body.append(btn)
 
-
+//tabel invullen met gegevens door de gebruiker ingevuld
+//via prompt
+let indexNr = 0
+btn.addEventListener('click', () => {
+    indexNr++
+    console.log('klik')
+    const rij = g('tr')
+    const ind = g('td')
+    const naam = g('td')
+    const stad = g('td')
+    const leeftijd = g('td')
+    ind.innerText = indexNr
+    naam.innerText = prompt('enter naam')
+    stad.innerText = prompt('stad')
+    leeftijd.innerText = prompt('leeftijd')
+    rij.append(ind, naam, stad, leeftijd)
+    tbody.appendChild(rij)
+})
