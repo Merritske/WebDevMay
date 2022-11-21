@@ -47,5 +47,20 @@ $("#outerW").click(function(){
 $("#w").click(function(){
     $("#styling").width(700)
 })
-
+var e = $(".child").parent()
+e.css('border', '2px solid green')
 }); 
+var a = $(".child").next()
+a.css('border', '3px dotted blue')
+var b = $('.child').siblings()
+b.css('color', 'red')
+
+// var c = $('p').eq(8)
+// c.css( 'padding','50px' )
+//of 
+var c = $('.child').siblings().eq(1)
+c.css('padding', '50px')
+//remove verwijdert element + zijn kinderen => alles verwijderen
+$('p').eq(9).remove()
+//empty verwijdert enkel de kinderen => inhoud leegmaken
+//$('.bak1').empty()
