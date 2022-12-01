@@ -50,7 +50,7 @@ function MovieDetail() {
                             <ListGroup>
                                 {
                                     movieDetail.genres !== undefined ?
-                                        movieDetail.genres.map((cat, index) => (
+                                        movieDetail.genres.map((cat) => (
                                             <ListGroup.Item className="rounded-0 py-0" key={cat.id}>{cat.name}</ListGroup.Item>
                                         )) :
                                         ''
