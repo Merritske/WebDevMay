@@ -20,7 +20,7 @@ function App() {
 
   return (
     <Database.Provider value={{ count, setCount }}>
-      <div>
+      <div style={{"textAlign":"center", "width":"80%", "margin": "0 auto"}}>
         <h1>Quiz App</h1>
         <QuizContainer/>
         {/* <Counter /> */}
