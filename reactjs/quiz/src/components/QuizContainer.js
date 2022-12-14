@@ -17,8 +17,9 @@ function QuizContainer() {
   const [randomN, setRandomN] = useState([])
   const [checked, setChecked] = useState(false)
  const [score, setScore] = useState(0)
+ const [limit, setLimit] = useState(15)
  // const [answers, setAnswers] = useState([])
-  const [end, setEnd] = useState(false)
+  const [end, setEnd] = useState([0])
 
 function randomInd(){
   let uniqueChars;
@@ -45,6 +46,7 @@ randomI.push(Math.floor(Math.random()*[4]))
 
 //fetch questions and answers
   useEffect(() => {
+    
     async function fetchQuestions() {
       console.log('load')
       let res = await fetch('https://the-trivia-api.com/api/questions?categories=arts_and_literature&limit=15&region=BE&difficulty=easy')
@@ -52,6 +54,8 @@ randomI.push(Math.floor(Math.random()*[4]))
          setQuestions(data)
     }
     fetchQuestions();
+console.log(end)
+
 
   }, [end])
 
@@ -60,26 +64,22 @@ randomI.push(Math.floor(Math.random()*[4]))
 
  let answers
 
-//function submitHandler(){
+
 
    function nextQuestion() {
     randomInd() 
     console.log(questions);
+    console.log(question)
     console.log('klik')
     setCurrentQuestion(currentQuestion + 1)
    setQuestion(questions[currentQuestion].question);
-  
   setAllAnswers(questions[currentQuestion].incorrectAnswers)
    setCorrectAnswer(questions[currentQuestion].correctAnswer)
+setLimit(limit -1)
 
 }
  console.log(question)
-
-console.log(correctAnswer)
- console.log(allAnswers) 
   answers = [...allAnswers,correctAnswer]
-//randomInd(answers)
-console.log(answers)
 
 function valueHandler(e){
 if(e.target.value == correctAnswer){
@@ -89,9 +89,20 @@ setScore(score +1)
 }else{
   console.log('wrong')
 }
-nextQuestion()
+if(limit == 0){
+  setEnd([...end, score])
+  alert(`the end of the game. Your score is ${score}/15`)
+  console.log(end)
+  setScore(0)
+  setLimit(15)
+  console.log(limit)
+  setCurrentQuestion(0)
+ 
 }
-console.log(score)
+  nextQuestion()
+
+}
+
  return (
     <div >
       <h2> QuizContainer</h2>
@@ -101,7 +112,7 @@ console.log(score)
           {question}
           <button onClick={nextQuestion}>Start</button>
           {/* {question == "" ? :<button onClick={nextQuestion}>Next</button> } */}
-<form onClick={valueHandler} style={{'display':'flex', 'flexDirection':'column', 'textAlign':'start', 'padding':'25px'}}>
+<form onChange={valueHandler} style={{'display':'flex', 'flexDirection':'column', 'textAlign':'start', 'padding':'25px'}}>
 {/* // onChange={submitHandler} */}
  {/* {answers.map((a)=>(
 <div>

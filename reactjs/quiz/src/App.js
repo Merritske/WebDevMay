@@ -2,21 +2,12 @@ import { useEffect, useState } from "react";
 import Counter from "./components/Counter";
 import QuizContainer from "./components/QuizContainer";
 import Database from "./context/context";
+import './style.css'
 
 
 function App() {
   // fetch url voor de vragen:https://the-trivia-api.com/api/questions?categories=arts_and_literature&limit=15&region=BE&difficulty=easy
   const [count, setCount] = useState(0)
-
-
-
-
-
-
-
-    
-
-
 
   return (
     <Database.Provider value={{ count, setCount }}>
