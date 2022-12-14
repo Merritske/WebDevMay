@@ -11,11 +11,39 @@ import React, { useState, useEffect } from 'react'
 function QuizContainer() {
   const [questions, setQuestions] = useState([]);
   const [question, setQuestion] = useState('');
- const [allAnswers, setAllAnswers] = useState([]);
-const [correctAnswer, setCorrectAnswer] = useState('')
+  const [allAnswers, setAllAnswers] = useState([]);
+  const [correctAnswer, setCorrectAnswer] = useState('')
   const [currentQuestion, setCurrentQuestion] = useState(0)
+  const [randomN, setRandomN] = useState([])
+  const [checked, setChecked] = useState(false)
+ const [score, setScore] = useState(0)
  // const [answers, setAnswers] = useState([])
   const [end, setEnd] = useState(false)
+
+function randomInd(){
+  let uniqueChars;
+
+  let randomI =[]
+do{
+
+randomI.push(Math.floor(Math.random()*[4])) 
+   console.log(randomI)
+    // random.push()   
+    uniqueChars = randomI.filter((c, index) => {
+      return randomI.indexOf(c) === index;
+    })
+
+    randomI = uniqueChars
+   }while(randomI.length != 4)
+  
+ console.log(uniqueChars)
+    setRandomN(uniqueChars)
+ }
+
+ console.log(randomN )
+
+
+//fetch questions and answers
   useEffect(() => {
     async function fetchQuestions() {
       console.log('load')
@@ -23,57 +51,47 @@ const [correctAnswer, setCorrectAnswer] = useState('')
       let data = await res.json()
          setQuestions(data)
     }
-
     fetchQuestions();
-   
+
   }, [end])
-const [random, setRandom] = useState([])
-console.log(questions);
-console.log(random)
+
+
+
+
  let answers
 
 //function submitHandler(){
- 
-   function nextQuestion() { 
+
+   function nextQuestion() {
+    randomInd() 
+    console.log(questions);
     console.log('klik')
-//     //random volgorde antwoorden
-    let uniqueChars;
-do{
-  setRandom(Math.floor(Math.random()*[4]))
-  // random.push()
-  uniqueChars = random.filter((c, index) => {
-    return random.indexOf(c) === index;
-  })
-  // random = uniqueChars
-  setRandom(uniqueChars)
-}while(random.length !== 4)
-console.log(random.length)
-
-
-
     setCurrentQuestion(currentQuestion + 1)
-    console.log(questions[currentQuestion].question)
-    setQuestion(questions[currentQuestion].question);
-    setAllAnswers(questions[currentQuestion].incorrectAnswers)
+   setQuestion(questions[currentQuestion].question);
+  
+  setAllAnswers(questions[currentQuestion].incorrectAnswers)
    setCorrectAnswer(questions[currentQuestion].correctAnswer)
- 
 
-console.log(random)
+}
+ console.log(question)
 
 console.log(correctAnswer)
- console.log(allAnswers)
+ console.log(allAnswers) 
+  answers = [...allAnswers,correctAnswer]
+//randomInd(answers)
+console.log(answers)
 
+function valueHandler(e){
+if(e.target.value == correctAnswer){
+  console.log('correct')
+  e.target.checked =  true
+setScore(score +1)
+}else{
+  console.log('wrong')
 }
-answers = [...allAnswers,correctAnswer]
-let randomA = []
- //setAnswers([...allAnswers,correctAnswer])
- console.log(answers)
- console.log(random)
-for(let x=0; x< random.length; x++){
-  randomA.push(answers[random[x]])
+nextQuestion()
 }
-console.log(randomA)
- console.log(answers.length)
+console.log(score)
  return (
     <div >
       <h2> QuizContainer</h2>
@@ -83,7 +101,7 @@ console.log(randomA)
           {question}
           <button onClick={nextQuestion}>Start</button>
           {/* {question == "" ? :<button onClick={nextQuestion}>Next</button> } */}
-<form >
+<form onClick={valueHandler} style={{'display':'flex', 'flexDirection':'column', 'textAlign':'start', 'padding':'25px'}}>
 {/* // onChange={submitHandler} */}
  {/* {answers.map((a)=>(
 <div>
@@ -91,12 +109,14 @@ console.log(randomA)
 </div>
 ))}    */}
 
- <label> <input type='radio' value={allAnswers[random[0]]} />{answers[3]}</label>
-<label>  <input type='radio' value={allAnswers[random[1]]} />{allAnswers[1]}</label>
-<label>  <input type='radio' value={allAnswers[random[2]]} />{allAnswers[2]}</label>
- <label> <input type='radio' value={allAnswers[random[3]]} />{allAnswers[0]}</label>
+ <label> <input type='radio' value={answers[randomN[0]]} checked= {false} />{answers[randomN[0]]}</label>
+<label>  <input type='radio' value={answers[randomN[1]]}  checked={false}/>{answers[randomN[1]]}</label>
+<label>  <input type='radio' value={answers[randomN[2]]} checked={false} />{answers[randomN[2]]}</label>
+ <label> <input type='radio' value={answers[randomN[3]]}  checked={false}/>{answers[randomN[3]]}</label>
 
 </form>
+
+
 {/* voorbeeld form radion-buttons
 const [selectedOption,setSelectedOption] = useState()
  <div className="form-check">
@@ -140,10 +160,10 @@ const [selectedOption,setSelectedOption] = useState()
           {/* <h3>{allAnswers}</h3> */}
         </div>
 
-        <h4> SCORE : </h4>
+      
       </div>
 
-
+  <h4> SCORE : {score} </h4>
     </div>
   )
 }
