@@ -1,6 +1,6 @@
 const fetch = require('node-fetch') // import fetch module
 // export string data
-// module.exports = "Hello world"
+ //module.exports = "Hello world"
 
 // export array data
 // module.exports = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -29,7 +29,7 @@ module.exports = {
         return age
     },
     getTodos:async function(){
-        let res = await fetch('https://jsonplaceholder.typicode.com/todos')
+        let res = await fetch('https://jsonplaceholder.typicode.com/todos/1')
         let data = await res.json()
         return data
     }

@@ -3,14 +3,18 @@ const http = require('http')
 const fetch = require('node-fetch')
 // create server
 http.createServer(function(req,res){
-    
+    console.log(req)
     res.writeHead(200,{'Content-Type':'text/html'})
-    fetch('https://jsonplaceholder.typicode.com/users/1')
+    fetch('https://jsonplaceholder.typicode.com/users/2')
     .then(res=>res.json())
     .then(data=>{
+        //als in bashterminal 'curl http://localhost:8080' wordt ingegeven
+        //rawHeaders opzoeken in terminal omdat we "console log(req)" doen, 
+        //4de item is 'curl'
         if(req.rawHeaders[3].includes('curl')){
-            res.write(data.name + " Terminaalll i see you")
+            res.write(data.name + " Terminal i see you")
         }else{
+            //normaal
             res.write(`<h1>${data.name}</h1>`)
         }
         res.end()
