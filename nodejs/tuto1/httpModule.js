@@ -9,7 +9,7 @@ http.createServer(function(req,res){
     .then(res=>res.json())
     .then(data=>{
         //als in bashterminal 'curl http://localhost:8080' wordt ingegeven
-        //rawHeaders opzoeken in terminal omdat we "console log(req)" doen, 
+        //rawHeaders opzoeken in terminal omdat we "console.log(req)" doen, 
         //4de item is 'curl'
         if(req.rawHeaders[3].includes('curl')){
             res.write(data.name + " Terminal i see you")

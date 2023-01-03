@@ -4,6 +4,7 @@ const http = require('http')
 // create server 
 const server = http.createServer(function(req,res){
     // console.log(req.url)
+    console.log(req.listeners)
     //console.log(req.httpVersion)
     res.writeHead(200,{'Content-Type':'text/html'})
     // res.write(`
@@ -12,11 +13,10 @@ const server = http.createServer(function(req,res){
     // res.end()
     if(req.url === '/'){
         res.write("Hello World - Homepage")
-        res.end()
     }else if(req.url ==='/login'){
         res.write("Hello World - Login Page")
-        res.end()
     }
+     res.end()
 })
 
 // listen on port 8080
