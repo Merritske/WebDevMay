@@ -8,9 +8,9 @@ const fs = require('fs'); // fs is a core module
 
 // read file
 fs.readFile('./test.txt', 'utf8', (err, data) => {
-    // console.log(typeof data) // convert buffer to string
-    // console.log(data.split(",")[0]) // convert text into array
-    // data.split(",").forEach(name=>console.log(name))
+  //console.log(typeof data) // convert buffer to string
+//console.log(data.split(",")) // convert text into array
+  // data.split(",").forEach(name=>console.log(name))
     // let binaryData = ""
     // for(let i=0; i<data.length;i++){
     //     let newData = data[i].charCodeAt(0).toString(2)
@@ -42,20 +42,27 @@ fs.readFile('./test.txt', 'utf8', (err, data) => {
 //     })
 // })
 
-function ReadFiles(ext) {
-    fs.readdir('./', (err, data) => {
-        let TxtFiles = data.filter(file => file.includes(ext)) // list of txt files
-        TxtFiles.forEach(txt => {
-            fs.readFile(txt, 'utf8', (err, data) => {
-                console.log(data, txt)
-            })
-        })
-    })
-}
+// function ReadFiles(ext) {
+//     fs.readdir('./', (err, data) => {
+//         let TxtFiles = data.filter(file => file.includes(ext)) // list of txt files
+//         TxtFiles.forEach(txt => {
+//             fs.readFile(txt, 'utf8', (err, data) => {
+//                 console.log(data, txt)
+//             })
+//         })
+//     })
+// }
 
 // ReadFiles('.java')
 // ReadFiles('.doc')
-
+fs.appendFile('./test.txt',
+    ', zet dit in de testfile', function(err){
+        if(err){
+            throw err; }
+            console.log("updated")
+       
+    }
+ )
 // write File
 // fs.writeFile('readme.txt','This is another test.',(err)=>{
 //     console.log('File is created')
@@ -64,7 +71,7 @@ function ReadFiles(ext) {
 // fs.writeFile('./public/readme.txt','readme file',(err)=>{
 //     console.log('File is created')
 //     if(err) throw console.log(err)
-// })
+// }) dit werkt niet want het kan geen folder creëren 'public'
 
 // append File
 // fs.appendFile('readme.txt','Extra string appended',(err)=>{
@@ -73,8 +80,8 @@ function ReadFiles(ext) {
 
 // fs.appendFile('users.json','5',(err)=>{
 //     console.log('file is appended')
-// })
-
+// }) users.json heb je zelf gemaakt en je wil 5 toevoegen aan de array=> lukt niet
+//=>oplossing:
 // fs.readFile('users.json','utf8',(err,data)=>{
 //     let users = JSON.parse(data) // from string to array/object
 //     console.log(users,"before")
