@@ -1,4 +1,5 @@
 const fetch = require('node-fetch')
+//nog node-fetch installeren, opzoeken hoe
 
 module.exports = {
     family :[
