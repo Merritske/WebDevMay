@@ -7,6 +7,11 @@
 //     console.log(data)
 // })
 
-const {family, codemakers} = require('./text')
+// const {family, codemakers} = require('./text')
 
-console.log(family)
+// console.log(family)
+
+var nav = document.querySelectorAll("#nav")
+//console.log(subnav)
+//TERUG OPZOEKEN
+ 
